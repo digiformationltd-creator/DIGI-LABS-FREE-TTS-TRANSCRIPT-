@@ -70,9 +70,12 @@ When one key reaches its daily rate limit, DIGI LABS seamlessly shifts to the ne
 
 ---
 
-## 🛡️ License & Brand Protection
+## 🛡️ License, Terms & Strict Resale Prohibition
 
-Published under the **DIGIFORMATION LTD Open-Source & Studio License** (Apache 2.0 / MIT Core Engine). Free forever for personal, creator, agency, and commercial audio/prompt production workflows. Commercial binary resale, white-labeling, or paid SaaS re-hosting without authorization is strictly restricted.
+Published under the **DIGIFORMATION LTD Source-Available & Studio License** (Apache 2.0 / MIT Core Engine).
+
+- ✅ **100% Free For Your Own System**: Free forever for your personal PC, agency workstation, and content creation workflow. Generate unlimited client audiobooks, podcasts, videos, and prompts. Keep 100% of your commercial client earnings.
+- ❌ **STRICTLY NO RESELLING**: Reselling this software, selling modified binaries, white-labeling, or re-hosting it as a paid commercial cloud SaaS is strictly prohibited. Exactly like DIGI LEAD HUNTER, this software is open-source/source-available exclusively for direct use on your own local machines.
 
 ---
 

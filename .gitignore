@@ -1,0 +1,9 @@
+node_modules/
+release/
+engines/
+data/audio/
+data/uploads/
+data/.env
+.env
+.DS_Store
+Thumbs.db

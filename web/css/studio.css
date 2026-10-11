@@ -1,0 +1,421 @@
+/* DIGI LABS — design system.
+ *
+ * The palette and the glass treatment come from the DigiFormation design
+ * package: near-black ground, cyan accent, frosted panels, Plus Jakarta Sans
+ * with JetBrains Mono for anything numeric. The markup and components are the
+ * studio's own.
+ *
+ * Deliberately single-theme. This is a dark studio tool — an editing surface
+ * where audio waveforms and level meters need a dark ground to read against —
+ * so every colour is set explicitly and nothing is left to the host theme.
+ */
+
+:root {
+  --bg-base: #060709;
+  --bg-deep: #07080B;
+
+  --glass-surface: rgba(18, 21, 30, 0.62);
+  --glass-elevated: rgba(28, 33, 48, 0.52);
+  --glass-card: rgba(255, 255, 255, 0.035);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-border-hover: rgba(56, 189, 248, 0.35);
+  --glass-shine: inset 0 1px 0 0 rgba(255, 255, 255, 0.14);
+  --glass-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.82), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+
+  --accent-cyan: #38BDF8;
+  --accent-glow: rgba(56, 189, 248, 0.35);
+  --accent-glow-strong: rgba(56, 189, 248, 0.55);
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+
+  --badge-bg: rgba(255, 255, 255, 0.06);
+  --badge-cyan: rgba(56, 189, 248, 0.12);
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  --font-urdu: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', var(--font-sans);
+
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { color-scheme: dark; }
+
+/* The window is frameless with a transparent backdrop, so the app paints its
+   own rounded card and the desktop shows through at the corners. Everything
+   lives inside one 100vh column that never scrolls — the page is an app
+   surface, not a document. */
+html, body { height: 100%; overflow: hidden; }
+
+body {
+  height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background: transparent;          /* the rounded card is .shell, not body */
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+}
+
+/* The rounded app card. The 10px radius is what gives the window its curved
+   corners; the drag region is the top bar, set in markup. */
+.shell {
+  height: 100vh;
+  border-radius: 12px;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 700px at 15% -10%, rgba(56, 189, 248, 0.07), transparent 55%),
+    radial-gradient(900px 600px at 95% 10%, rgba(56, 189, 248, 0.05), transparent 55%),
+    var(--bg-base);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.8);
+}
+
+::selection { background: var(--accent-glow); color: #fff; }
+
+:is(button, a, input, select, textarea):focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+/* ── Shell ──────────────────────────────────────────────────────────────── */
+
+.shell { display: flex; flex-direction: column; }
+
+.topbar {
+  display: flex; align-items: center; gap: 16px;
+  padding: 10px 14px 10px 18px;
+  -webkit-app-region: drag;
+  border-top-left-radius: 12px; border-top-right-radius: 12px;
+  background: var(--glass-surface);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky; top: 0; z-index: 40;
+}
+
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+/* The logo art is a black disc on a square canvas, so the canvas corners show
+   as hard edges unless the image is clipped to the same circle as its holder.
+   object-fit: cover plus overflow: hidden does that; sizing the image smaller
+   inside the circle instead would leave those corners visible. */
+.brand-mark {
+  width: 40px; height: 40px; flex: none;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid; place-items: center;
+  background: #000;
+  box-shadow: 0 0 0 1px var(--glass-border), 0 0 24px -8px var(--accent-glow);
+}
+.brand-mark img {
+  width: 100%; height: 100%;
+  object-fit: cover; border-radius: 50%;
+  display: block;
+}
+.brand-title {
+  font-size: 14px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase;
+  white-space: nowrap;
+}
+.brand-sub { font-size: 10.5px; color: var(--text-muted); letter-spacing: 0.08em; margin-top: 2px; }
+
+.topbar-spacer { flex: 1; }
+
+.status-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 13px; border-radius: 999px;
+  background: var(--badge-bg); border: 1px solid var(--glass-border);
+  font-size: 11.5px; color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+.status-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--text-muted); flex: none; }
+.status-pill.online .dot { background: var(--success); box-shadow: 0 0 10px var(--success); }
+.status-pill.offline .dot { background: var(--error); box-shadow: 0 0 10px var(--error); }
+
+/* ── Tabs ───────────────────────────────────────────────────────────────── */
+
+.tabs, .status-pill, .win-controls, .brand-mark { -webkit-app-region: no-drag; }
+.tabs { display: flex; gap: 4px; padding: 4px; background: var(--badge-bg); border-radius: var(--r-md); border: 1px solid var(--glass-border); }
+.tab {
+  appearance: none; border: 0; cursor: pointer;
+  padding: 7px 16px; border-radius: var(--r-sm);
+  background: transparent; color: var(--text-secondary);
+  font-family: inherit; font-size: 12.5px; font-weight: 600;
+  transition: background .18s, color .18s;
+}
+.tab:hover { color: var(--text-primary); }
+.tab[aria-selected="true"] { background: var(--badge-cyan); color: var(--accent-cyan); }
+
+/* ── Layout ─────────────────────────────────────────────────────────────── */
+
+/* The work area fills the rest of the window and does not scroll itself — each
+   view is responsible for fitting. Only genuinely long lists (history) get an
+   inner scroll, declared where they live. */
+main { flex: 1; width: 100%; max-width: 1240px; margin: 0 auto; padding: 16px 20px; min-height: 0; overflow: hidden; }
+
+.view { display: none; height: 100%; }
+.view.active { display: flex; flex-direction: column; }
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+/* The left column stacks the editor and the result and shares the height
+   between them, so neither forces the page taller than the window. */
+.grid > div:first-child { display: flex; flex-direction: column; gap: 16px; min-height: 0; }
+.grid > aside { display: flex; flex-direction: column; gap: 16px; min-height: 0; overflow: auto; }
+
+/* Panels that should grow to fill their column carry .panel-grow. */
+.panel-grow { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.panel {
+  background: var(--glass-surface);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--glass-shadow), var(--glass-shine);
+  padding: 16px 18px;
+}
+.panel + .panel { margin-top: 20px; }
+
+.panel-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+.panel-head h2 { font-size: 14px; font-weight: 700; letter-spacing: 0.02em; }
+.panel-head .hint { font-size: 11.5px; color: var(--text-muted); }
+
+/* ── Editor ─────────────────────────────────────────────────────────────── */
+
+textarea#textEditor {
+  width: 100%; flex: 1; min-height: 120px; resize: none;
+  padding: 16px;
+  background: var(--bg-deep);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  color: var(--text-primary);
+  font-family: inherit; font-size: 14.5px; line-height: 1.75;
+  transition: border-color .18s, box-shadow .18s;
+}
+textarea#textEditor::placeholder { color: var(--text-muted); }
+textarea#textEditor:focus { border-color: var(--glass-border-hover); box-shadow: 0 0 0 3px rgba(56,189,248,.10); outline: none; }
+textarea#textEditor.rtl { direction: rtl; text-align: right; font-family: var(--font-urdu); font-size: 17px; line-height: 2.1; }
+
+.editor-foot { display: flex; align-items: center; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
+.counts { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-muted); }
+.counts b { color: var(--text-secondary); font-weight: 500; }
+.editor-foot .spacer { flex: 1; }
+
+/* ── Controls ───────────────────────────────────────────────────────────── */
+
+.field { margin-bottom: 12px; }
+.field > label {
+  display: block; margin-bottom: 7px;
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+select, input[type="text"], input[type="password"] {
+  width: 100%; padding: 10px 12px;
+  background: var(--bg-deep);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-sm);
+  color: var(--text-primary);
+  font-family: inherit; font-size: 13px;
+}
+select:focus, input:focus { border-color: var(--glass-border-hover); outline: none; }
+select:disabled { opacity: .45; cursor: not-allowed; }
+
+/* Engine choice. Each card states what it is best for and, when it cannot run,
+   the one sentence that says why — so a disabled card never looks arbitrary. */
+.engines { display: grid; gap: 10px; }
+.engine {
+  display: block; width: 100%; text-align: left; cursor: pointer;
+  padding: 14px; border-radius: var(--r-md);
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  color: inherit; font-family: inherit;
+  transition: border-color .18s, background .18s, transform .12s;
+}
+.engine:hover:not([disabled]) { border-color: var(--glass-border-hover); transform: translateY(-1px); }
+.engine[aria-pressed="true"] {
+  border-color: var(--accent-cyan);
+  background: var(--badge-cyan);
+  box-shadow: 0 0 0 1px var(--accent-glow), 0 10px 30px -14px var(--accent-glow-strong);
+}
+.engine[disabled] { opacity: .5; cursor: not-allowed; }
+.engine-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.engine-name { font-size: 13.5px; font-weight: 700; }
+.engine-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.engine-for { font-size: 11.5px; color: var(--text-secondary); margin-top: 9px; line-height: 1.5; }
+.engine-why { font-size: 11.5px; color: var(--warning); margin-top: 9px; line-height: 1.5; }
+
+.chip {
+  font-family: var(--font-mono); font-size: 10px;
+  padding: 3px 8px; border-radius: 999px;
+  background: var(--badge-bg); border: 1px solid var(--glass-border);
+  color: var(--text-secondary); white-space: nowrap;
+}
+.chip.ok { color: var(--success); border-color: rgba(16,185,129,.3); }
+.chip.warn { color: var(--warning); border-color: rgba(245,158,11,.3); }
+
+/* Speed. The value is shown in mono next to the label, because a slider with no
+   readout makes people guess. */
+.slider-row { display: flex; align-items: center; gap: 12px; }
+input[type="range"] {
+  flex: 1; height: 4px; appearance: none;
+  background: rgba(255,255,255,.1); border-radius: 2px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent-cyan); border: 0; cursor: pointer;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+.slider-val { font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan); min-width: 46px; text-align: right; }
+
+/* ── Buttons ────────────────────────────────────────────────────────────── */
+
+.btn {
+  appearance: none; cursor: pointer; font-family: inherit;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 11px 20px; border-radius: var(--r-sm);
+  font-size: 13px; font-weight: 700;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-card); color: var(--text-primary);
+  transition: background .18s, border-color .18s, transform .12s;
+}
+.btn:hover:not([disabled]) { border-color: var(--glass-border-hover); transform: translateY(-1px); }
+.btn[disabled] { opacity: .45; cursor: not-allowed; transform: none; }
+.btn-ghost { background: transparent; color: var(--text-secondary); }
+.btn-primary {
+  width: 100%; padding: 14px 20px;
+  background: linear-gradient(135deg, var(--accent-cyan), #0EA5E9);
+  border-color: transparent; color: #03151f;
+  letter-spacing: 0.04em; text-transform: uppercase; font-size: 12.5px;
+  box-shadow: 0 12px 34px -14px var(--accent-glow-strong);
+}
+.btn-primary:hover:not([disabled]) { box-shadow: 0 16px 40px -12px var(--accent-glow-strong); }
+.btn-sm { padding: 7px 13px; font-size: 11.5px; }
+
+/* ── Progress ───────────────────────────────────────────────────────────── */
+
+.progress { margin-top: 16px; display: none; }
+.progress.on { display: block; }
+.progress-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.progress-stage { font-size: 12.5px; color: var(--text-secondary); }
+.progress-pct { font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan); }
+.progress-track { height: 4px; background: rgba(255,255,255,.08); border-radius: 2px; overflow: hidden; }
+.progress-fill {
+  height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--accent-cyan), #0EA5E9);
+  border-radius: 2px; transition: width .35s ease;
+}
+
+/* ── Result ─────────────────────────────────────────────────────────────── */
+
+.result { display: none; }
+.result.on { display: block; }
+
+.player {
+  background: var(--bg-deep);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  padding: 18px;
+}
+canvas#wave { display: block; width: 100%; height: 72px; border-radius: var(--r-sm); background: rgba(255,255,255,.02); }
+.player-row { display: flex; align-items: center; gap: 14px; margin-top: 14px; }
+.play-btn {
+  width: 44px; height: 44px; flex: none; border-radius: 50%; cursor: pointer;
+  border: 1px solid var(--accent-cyan); background: var(--badge-cyan); color: var(--accent-cyan);
+  font-size: 15px; display: grid; place-items: center;
+}
+.time { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); min-width: 96px; }
+.seek { flex: 1; }
+
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+/* ── History ────────────────────────────────────────────────────────────── */
+
+.hist-list { display: grid; gap: 10px; }
+.hist {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px; border-radius: var(--r-md);
+  background: var(--glass-card); border: 1px solid var(--glass-border);
+}
+.hist:hover { border-color: var(--glass-border-hover); }
+.hist-body { flex: 1; min-width: 0; }
+.hist-text { font-size: 13px; line-height: 1.5; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hist-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-muted); margin-top: 5px; }
+
+.empty { text-align: center; padding: 56px 20px; color: var(--text-muted); }
+.empty-mark {
+  width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 22px;
+  background: var(--badge-bg); border: 1px solid var(--glass-border);
+}
+.empty p { font-size: 13px; margin-top: 6px; }
+
+/* ── Settings ───────────────────────────────────────────────────────────── */
+
+.slot { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--glass-border); }
+.slot:last-child { border-bottom: 0; }
+.slot-name { font-family: var(--font-mono); font-size: 11.5px; color: var(--text-secondary); min-width: 178px; }
+.slot .grow { flex: 1; }
+
+.note { font-size: 12px; color: var(--text-muted); line-height: 1.65; }
+
+/* ── Toasts ─────────────────────────────────────────────────────────────── */
+
+#toasts { position: fixed; right: 20px; bottom: 20px; z-index: 90; display: grid; gap: 10px; max-width: 360px; }
+.toast {
+  padding: 13px 16px; border-radius: var(--r-md);
+  background: var(--glass-elevated); backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);
+  font-size: 12.5px; line-height: 1.55;
+  animation: rise .22s ease;
+}
+.toast.err { border-color: rgba(239,68,68,.4); }
+.toast.ok { border-color: rgba(16,185,129,.4); }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ── Narrow ─────────────────────────────────────────────────────────────── */
+
+@media (max-width: 920px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  main { padding: 20px 16px 44px; }
+  .topbar { padding: 12px 16px; flex-wrap: wrap; }
+  .brand-sub { display: none; }
+}
+
+/* ── Window controls (frameless) ────────────────────────────────────────── */
+.win-controls { display: flex; gap: 2px; margin-left: 4px; -webkit-app-region: no-drag; }
+.wc {
+  width: 34px; height: 28px; border: 0; cursor: pointer;
+  background: transparent; color: var(--text-secondary);
+  font-size: 13px; border-radius: 7px; line-height: 1;
+  display: grid; place-items: center;
+  transition: background .15s, color .15s;
+}
+.wc:hover { background: var(--glass-card); color: var(--text-primary); }
+.wc-close:hover { background: var(--error); color: #fff; }
+
+/* ── API-key banner ─────────────────────────────────────────────────────── */
+.keybanner {
+  display: none;
+  align-items: center; gap: 12px;
+  margin: 0 0 14px; padding: 12px 16px;
+  background: var(--badge-cyan); border: 1px solid var(--glass-border-hover);
+  border-radius: var(--r-md);
+}
+.keybanner.on { display: flex; }
+.keybanner .kb-text { flex: 1; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; }
+.keybanner .kb-text b { color: var(--text-primary); }

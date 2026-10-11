@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DIGI LABS</title>
+<style>
+  /* The studio's own palette, taken from the design package's tokens. */
+  :root {
+    --bg-base: #060709;
+    --bg-deep: #07080B;
+    --glass-border: rgba(255, 255, 255, 0.09);
+    --accent-cyan: #38BDF8;
+    --accent-glow: rgba(56, 189, 248, 0.35);
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    background: radial-gradient(900px 600px at 50% -10%, rgba(56,189,248,0.10), transparent 60%), var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    display: grid; place-items: center;
+    -webkit-user-select: none; user-select: none;
+    border: 1px solid var(--glass-border);
+  }
+
+  .wrap { text-align: center; width: 100%; padding: 0 44px; }
+
+  /* The mark sits in a soft cyan halo so the black logo reads on a near-black
+     ground without putting a plate behind it. */
+  .mark {
+    width: 84px; height: 84px; margin: 0 auto 22px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: rgba(56,189,248,0.10);
+    box-shadow: 0 0 0 1px var(--glass-border), 0 0 42px -6px var(--accent-glow);
+    animation: breathe 2.8s ease-in-out infinite;
+  }
+  /* Clipped to the same circle as its holder: the logo art sits on a square
+     canvas whose corners would otherwise show as hard edges. */
+  .mark { overflow: hidden; background: #000; }
+  .mark img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
+  @keyframes breathe {
+    0%, 100% { box-shadow: 0 0 0 1px var(--glass-border), 0 0 34px -10px var(--accent-glow); }
+    50%      { box-shadow: 0 0 0 1px rgba(56,189,248,0.3), 0 0 58px 0 var(--accent-glow); }
+  }
+
+  h1 {
+    font-size: 21px; font-weight: 800; letter-spacing: 0.26em;
+    text-transform: uppercase;
+  }
+  .by { margin-top: 9px; font-size: 11.5px; color: var(--text-secondary); letter-spacing: 0.1em; }
+
+  /* An indeterminate sweep, not a fake percentage: the studio genuinely does not
+     know how long the engine check will take, and inventing a number would be a
+     small lie the person can feel. */
+  .track {
+    margin: 30px auto 0; width: 230px; height: 2px;
+    background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden;
+  }
+  .track span {
+    display: block; width: 40%; height: 100%; border-radius: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+    animation: sweep 1.25s ease-in-out infinite;
+  }
+  @keyframes sweep { 0% { transform: translateX(-110%); } 100% { transform: translateX(260%); } }
+
+  #stage { margin-top: 16px; font-size: 11.5px; color: var(--text-muted); min-height: 15px; letter-spacing: 0.04em; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mark, .track span { animation: none; }
+    .track span { width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="mark"><img src="../web/assets/logo-round.png" alt=""></div>
+    <h1>Digi Labs</h1>
+    <div class="by">by DigiFormation Ltd</div>
+    <div class="track"><span></span></div>
+    <div id="stage">Starting the studio…</div>
+  </div>
+<script>
+  // The main process reports real stages here. If it never does, the text simply
+  // stays as it is rather than cycling through invented ones.
+  if (window.splash && window.splash.onStage) {
+    window.splash.onStage(function (text) {
+      var el = document.getElementById("stage");
+      if (el && text) el.textContent = text;
+    });
+  }
+</script>
+</body>
+</html>

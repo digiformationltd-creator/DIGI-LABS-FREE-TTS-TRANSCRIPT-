@@ -1,0 +1,57 @@
+{
+  "name": "digi-labs",
+  "productName": "DIGI LABS",
+  "version": "1.0.0",
+  "description": "Text to speech studio by DigiFormation Ltd",
+  "main": "electron/main.cjs",
+  "author": "DigiFormation Ltd",
+  "private": true,
+  "scripts": {
+    "server": "node server/index.js",
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "dependencies": {
+    "express": "^4.22.3"
+  },
+  "devDependencies": {
+    "electron": "^43.1.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "uk.co.digiformation.digilabs",
+    "productName": "DIGI LABS",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "electron/**",
+      "server/**",
+      "web/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "web/assets/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "DIGI LABS"
+    },
+    "extraResources": [
+      {
+        "from": "engines",
+        "to": "engines",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "allowScripts": {
+    "electron@33.4.11": true
+  }
+}

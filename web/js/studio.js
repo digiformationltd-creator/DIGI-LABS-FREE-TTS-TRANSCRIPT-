@@ -360,6 +360,15 @@ const Studio = (() => {
       t.addEventListener("click", () => switchView(t.dataset.view));
     }
 
+    // External link delegation for desktop shell
+    document.addEventListener("click", (e) => {
+      const link = e.target.closest('a[href^="http"], a[href^="https"], a[href^="mailto"]');
+      if (link && win.openExternal) {
+        e.preventDefault();
+        win.openExternal(link.href);
+      }
+    });
+
     $("textEditor").addEventListener("input", counts);
     $("clearBtn").addEventListener("click", () => { $("textEditor").value = ""; counts(); });
     $("sampleBtn").addEventListener("click", () => {

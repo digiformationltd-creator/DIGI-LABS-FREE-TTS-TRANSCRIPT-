@@ -70,8 +70,22 @@ When one key reaches its daily rate limit, DIGI LABS seamlessly shifts to the ne
 
 ---
 
-## 📜 Licence
+## 🛡️ License & Brand Protection
 
-Distributed under the Apache 2.0 / MIT License. Free for personal, commercial, and educational use.
+Published under the **DIGIFORMATION LTD Open-Source & Studio License** (Apache 2.0 / MIT Core Engine). Free forever for personal, creator, agency, and commercial audio/prompt production workflows. Commercial binary resale, white-labeling, or paid SaaS re-hosting without authorization is strictly restricted.
 
-Developed by **DigiFormation Ltd** • Covent Garden, London, UK.
+---
+
+## 🏢 Official Company & Contact Directory
+
+**DIGI LABS** is proudly developed, maintained, and open-sourced by **DIGIFORMATION LTD**:
+
+- **Primary WhatsApp Support Hotline:** [+92 316 4467464 (03164467464)](https://wa.me/923164467464?text=Hello%20DIGIFORMATION%20LTD%2C%20I%20am%20using%20DIGI%20LABS)
+- **Official Corporate Emails:** [info@digiformation.co.uk](mailto:info@digiformation.co.uk) • [info@digibizos.co.uk](mailto:info@digibizos.co.uk)
+- **Companies House UK Registry:** [Company # 16994903 (Official UK Government Registry)](https://find-and-update.company-information.service.gov.uk/company/16994903)
+- **DIGIFORMATION LTD Corporate Website:** [https://www.digiformation.co.uk/](https://www.digiformation.co.uk/)
+- **Digi Biz OS Ecosystem:** [https://www.digibizos.co.uk/](https://www.digibizos.co.uk/)
+- **Official Linktree (All Verified Channels):** [https://linktr.ee/digiformationltd](https://linktr.ee/digiformationltd)
+
+© 2026 DIGIFORMATION LTD. All Rights Reserved. Registered in England & Wales (Company # 16994903).
+

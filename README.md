@@ -67,15 +67,13 @@ npm run dist
 
 ---
 
-## 🔑 How to Get Your Free Gemini API Key (3 Simple Steps)
+## 🔑 Super Simple Setup: 3 Easy Steps
 
-Gemini 2.5 Flash Studio Voice requires a Google AI Studio API key. Google provides **100% free API access with zero credit card or billing requirements**:
+1. **Install the app and go to the Settings section**: Download and install DIGI LABS on your PC, then click **Settings (⚙️ Gear Icon)** in the top bar.
+2. **Press 'Get API Key' & generate your key**: Click the [**Get API Key**](https://aistudio.google.com/app/apikey) button to open Google AI Studio, click **"+ Create API key"**, and copy your free key in 1 click (no credit card or billing required).
+3. **Paste key & start using**: Paste your key into the **Gemini API Key** field, click **Save**, and start using DIGI LABS immediately!
 
-1. **Open Google AI Studio**: Go directly to [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) and sign in with any standard Google or Gmail account.
-2. **Create API Key (1-Click)**: Click the blue **"+ Create API key"** button on the top right, select **"Create key in new project"**, and copy your secret key string (starts with `AIzaSy...`).
-3. **Paste into DIGI LABS**: Open DIGI LABS on your PC, click **Settings (⚙️ Gear Icon)**, paste your key into **"Gemini API Key"**, and click Save.
-
-> 💡 **Direct Shortcut:** 👉 [**Click Here to Get Your Free Gemini API Key on Google AI Studio ↗**](https://aistudio.google.com/app/apikey)
+> 💡 **Direct Shortcut:** 👉 [**Click Here to Get API Key on Google AI Studio ↗**](https://aistudio.google.com/app/apikey)
 
 ---
 

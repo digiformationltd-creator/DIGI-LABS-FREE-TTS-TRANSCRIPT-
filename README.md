@@ -102,16 +102,16 @@ Published under the **DIGIFORMATION LTD Source-Available & Studio License** (Apa
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="220">
-        <img src="assets/founder-haroon.png" alt="Muhammad Haroon - Founder & CEO, DIGIFORMATION LTD" width="170" style="border-radius: 12px;" />
+      <td align="center" width="200" valign="middle">
+        <a href="https://www.digiformation.co.uk/">
+          <img src="assets/digiformation-logo-black.png" alt="DIGIFORMATION LTD Logo" width="160" />
+        </a>
+        <br /><br />
+        <strong>DIGIFORMATION LTD</strong>
         <br />
-        <strong>Muhammad Haroon</strong>
-        <br />
-        <sub>Founder & CEO, DIGIFORMATION LTD</sub>
+        <sub>Company # 16994903</sub>
       </td>
       <td valign="middle">
-        <img src="assets/digiformation-logo-official.png" alt="DIGIFORMATION LTD Logo" width="210" />
-        <br /><br />
         <strong>DIGI LABS</strong> is engineered and open-sourced by <strong>DIGIFORMATION LTD</strong> — a registered UK corporate entity providing agentic AI architecture and sovereign digital infrastructure.
         <br /><br />
         🌐 <strong>Corporate Website:</strong> <a href="https://www.digiformation.co.uk/">https://www.digiformation.co.uk/</a><br />

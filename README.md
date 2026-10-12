@@ -5,6 +5,23 @@
 # DIGI LABS — Unlimited Free Human TTS & Video-to-Prompt Studio
 ### The Sovereign Open-Source ElevenLabs Alternative & Media Reverse-Engineering Engine
 
+<p align="center">
+  <a href="https://www.digibizos.co.uk/open-source/digi-labs">
+    <img src="https://img.shields.io/badge/🌐_Official_Portal-DIGI_BIZ_OS-7c3aed?style=for-the-badge" alt="Official DIGI BIZ OS Portal" />
+  </a>
+  <a href="https://www.digibizos.co.uk/open-source/digi-labs">
+    <img src="https://img.shields.io/badge/⚡_Download_Windows_Setup-.exe_(253MB)-10b981?style=for-the-badge" alt="Download Windows Installer" />
+  </a>
+  <a href="https://www.digibizos.co.uk/open-source/digi-labs">
+    <img src="https://img.shields.io/badge/📦_Portable_Unpack-.zip_(357MB)-0284c7?style=for-the-badge" alt="Download Portable Build" />
+  </a>
+</p>
+
+> [!TIP]
+> 📥 **Direct Windows Installer (.exe 253MB) & Portable Release (.zip 357MB):**  
+> Standalone setup files and instant downloads are hosted on our official DIGI BIZ OS portal:  
+> 👉 **[https://www.digibizos.co.uk/open-source/digi-labs](https://www.digibizos.co.uk/open-source/digi-labs)**
+
 DIGI LABS is a standalone, ultra-realistic desktop voice and media intelligence workstation created by DigiFormation Ltd. It delivers human-grade voice synthesis (Gemini 2.5 Flash Voice & Edge-TTS) with zero monthly fees, alongside a revolutionary **Video-to-Prompt & Course Extraction Engine**.
 
 ---

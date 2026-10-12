@@ -20,7 +20,6 @@ const { spawn, execFileSync } = require("node:child_process");
 const gemini = require("./engines/gemini-tts");
 const fx = require("./engines/audio-fx");
 const stt = require("./engines/transcribe");
-const edge = require("./engines/edge-tts");
 const jobsStore = require("./jobs");
 
 const ROOT = path.join(__dirname, "..");
@@ -82,20 +81,6 @@ function ffmpeg() {
   ]) || onPath("ffmpeg") || null;
 }
 
-/** Is edge_tts importable by the studio's Python? Asked once and cached: this
- *  spawns a process, and the answer does not change while the app is open. */
-let _edgeReady = null;
-function edgeReady() {
-  if (_edgeReady !== null) return _edgeReady;
-  const py = python();
-  if (!py) return (_edgeReady = false);
-  try {
-    execFileSync(py, ["-c", "import edge_tts"], { stdio: "ignore", windowsHide: true, timeout: 20000 });
-    _edgeReady = true;
-  } catch { _edgeReady = false; }
-  return _edgeReady;
-}
-
 const app = express();
 app.use(express.json({ limit: "12mb" }));
 app.use(express.static(WEB));
@@ -112,7 +97,7 @@ app.get("/api/health", (_req, res) => {
     python: !!python(),
     ffmpeg: !!ffmpeg(),
     gemini_keys: gemini.keyCount(),
-    edge_ready: edgeReady(),
+    edge_ready: false,
   });
 });
 
@@ -140,21 +125,7 @@ app.get("/api/engines", (_req, res) => {
         voices: gemini.VOICES,
         styles: gemini.styleList(),
         quota: q,
-        best_for: "Short, polished pieces — adverts, intros, product lines.",
-      },
-      {
-        id: "free",
-        name: "Free Voice",
-        subtitle: "Edge-TTS · unlimited",
-        kind: "cloud-free",
-        ready: edgeReady(),
-        reason: !py ? "The studio's Python is not installed yet — see Settings."
-          : !edgeReady() ? "The free voice package is missing — see Settings."
-          : "",
-        voices: edge.VOICES,
-        styles: edge.styleList(),
-        quota: null,
-        best_for: "Long work — chapters, audiobooks, Urdu narration.",
+        best_for: "Short, polished pieces — adverts, intros, product lines. Male voices only.",
       },
     ],
   });
@@ -168,15 +139,15 @@ app.get("/api/quota", (_req, res) => res.json({ ok: true, ...gemini.quota() }));
 // because that engine takes 8,000 characters per request and a chapter is more.
 app.post("/api/generate", (req, res) => {
   const text = String(req.body && req.body.text || "").trim();
-  const engineId = String(req.body && req.body.engine || "free");
+  const engineId = String(req.body && req.body.engine || "studio");
   if (!text) return res.status(400).json({ ok: false, message: "Type or paste some text first." });
-  if (!["studio", "free"].includes(engineId)) {
+  if (!["studio"].includes(engineId)) {
     return res.status(400).json({ ok: false, message: `Unknown engine "${engineId}".` });
   }
 
   const job = jobsStore.create({
     engine: engineId,
-    engineName: engineId === "studio" ? "Studio Voice (Gemini)" : "Free Voice (Edge-TTS)",
+    engineName: "Studio Voice (Gemini)",
     text,
     voice: String(req.body.voice || ""),
     language: String(req.body.language || ""),
@@ -193,18 +164,6 @@ app.post("/api/generate", (req, res) => {
 async function run(job) {
   const id = job.job_id;
   try {
-    if (job.engine === "free") {
-      jobsStore.stage(id, "Narrating", 25);
-      const out = await edge.speak({
-        text: job.text, voice: job.voice, lang: job.language,
-        style: job.style, speed: job.speed, python: python(),
-      });
-      jobsStore.stage(id, "Writing the file", 85);
-      job.voice = out.voice;
-      jobsStore.finish(id, out.buffer, AUDIO);
-      return;
-    }
-
     // Studio engine. Gemini accepts 8,000 characters per request, but a chunk
     // that large produces minutes of audio in one call and overruns the 120s
     // request timeout — measured: 1,500 chars is ~24s, so a 7,000-char chunk
@@ -456,7 +415,7 @@ app.get("/api/settings", (_req, res) => {
     slots: gemini.keySlots.map((n) => ({ name: n, filled: !!(process.env[n] || "").trim() })),
     python: python() || null,
     ffmpeg: ffmpeg() || null,
-    edge_ready: edgeReady(),
+    edge_ready: false,
   });
 });
 

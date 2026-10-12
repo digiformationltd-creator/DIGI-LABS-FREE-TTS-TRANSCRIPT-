@@ -158,6 +158,25 @@ body {
    inner scroll, declared where they live. */
 main { flex: 1; width: 100%; max-width: 1240px; margin: 0 auto; padding: 16px 20px; min-height: 0; overflow: hidden; }
 
+/* Persistent footer — sits at the bottom of the shell and carries the window's
+   rounded bottom edge so content never spills past the curved corners. */
+.appfoot {
+  flex: 0 0 auto;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 8px 18px;
+  font-size: 10.5px; color: var(--text-secondary, #94a3b8);
+  background: var(--glass-surface, rgba(255,255,255,0.03));
+  border-top: 1px solid var(--glass-border, rgba(255,255,255,0.08));
+  border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;
+  -webkit-app-region: drag;
+}
+.appfoot a { color: #7dd3fc; text-decoration: none; -webkit-app-region: no-drag; }
+.appfoot a:hover { text-decoration: underline; }
+.appfoot-brand strong { color: var(--text-primary, #e8eaf0); }
+.appfoot-sep { opacity: 0.4; }
+.appfoot-spacer { flex: 1; }
+.appfoot-dim { opacity: 0.6; }
+
 .view { display: none; height: 100%; }
 .view.active { display: flex; flex-direction: column; }
 

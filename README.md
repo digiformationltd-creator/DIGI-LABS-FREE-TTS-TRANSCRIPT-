@@ -12,14 +12,11 @@
   <a href="https://www.digibizos.co.uk/open-source/digi-labs">
     <img src="https://img.shields.io/badge/⚡_Download_Windows_Setup-.exe_(253MB)-10b981?style=for-the-badge" alt="Download Windows Installer" />
   </a>
-  <a href="https://www.digibizos.co.uk/open-source/digi-labs">
-    <img src="https://img.shields.io/badge/📦_Portable_Unpack-.zip_(357MB)-0284c7?style=for-the-badge" alt="Download Portable Build" />
-  </a>
 </p>
 
 > [!TIP]
-> 📥 **Direct Windows Installer (.exe 253MB) & Portable Release (.zip 357MB):**  
-> Standalone setup files and instant downloads are hosted on our official DIGI BIZ OS portal:  
+> 📥 **Direct Windows Installer Setup (.exe 253MB):**  
+> Standalone Windows setup file and instant downloads are hosted on our official DIGI BIZ OS portal:  
 > 👉 **[https://www.digibizos.co.uk/open-source/digi-labs](https://www.digibizos.co.uk/open-source/digi-labs)**
 
 DIGI LABS is a standalone, ultra-realistic desktop voice and media intelligence workstation created by DigiFormation Ltd. It delivers human-grade voice synthesis (Gemini 2.5 Flash Voice & Edge-TTS) with zero monthly fees, alongside a revolutionary **Video-to-Prompt & Course Extraction Engine**.

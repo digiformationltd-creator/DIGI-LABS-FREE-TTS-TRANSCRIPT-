@@ -437,11 +437,33 @@ app.post("/api/settings/key", (req, res) => {
   }
 });
 
-app.listen(PORT, "127.0.0.1", () => {
-  console.log(`[DIGI LABS] listening on http://127.0.0.1:${PORT}`);
-  console.log(`  python : ${python() || "not found"}`);
-  console.log(`  ffmpeg : ${ffmpeg() || "not found"}`);
-  console.log(`  gemini : ${gemini.keyCount()} key(s)`);
-});
+// Listen with fallback: if the chosen port is already taken — typically a second
+// copy of DIGI LABS (installed + unpacked) running side by side — step to the
+// next free port instead of crashing the whole app with an uncaught EADDRINUSE.
+// The port actually bound is published both on a global (the desktop shell loads
+// this file in-process) and to a tiny .port file, so the window opens the right URL.
+function listenWithFallback(port, triesLeft) {
+  const server = app.listen(port, "127.0.0.1");
+  server.on("listening", () => {
+    global.__DIGILABS_PORT = port;
+    try {
+      fs.mkdirSync(DATA, { recursive: true });
+      fs.writeFileSync(path.join(DATA, ".port"), String(port), "utf-8");
+    } catch { /* non-fatal */ }
+    console.log(`[DIGI LABS] listening on http://127.0.0.1:${port}`);
+    console.log(`  python : ${python() || "not found"}`);
+    console.log(`  ffmpeg : ${ffmpeg() || "not found"}`);
+    console.log(`  gemini : ${gemini.keyCount()} key(s)`);
+  });
+  server.on("error", (err) => {
+    if (err && err.code === "EADDRINUSE" && triesLeft > 0) {
+      console.warn(`[DIGI LABS] port ${port} in use — trying ${port + 1}`);
+      setTimeout(() => listenWithFallback(port + 1, triesLeft - 1), 150);
+    } else {
+      console.error("[DIGI LABS] server could not listen:", err && err.message);
+    }
+  });
+}
+listenWithFallback(PORT, 12);
 
 module.exports = app;

@@ -12,6 +12,9 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const PORT = Number(process.env.PORT || 4300);
+// The server may bind a different port if 4300 is taken (a second copy running).
+// Everything that builds a URL reads this, set once the server is actually up.
+let activePort = PORT;
 const ROOT = path.join(__dirname, "..");
 // In a packaged build, data must live where the user can actually write.
 const DATA = app.isPackaged ? path.join(app.getPath("userData"), "data") : path.join(ROOT, "data");
@@ -53,7 +56,7 @@ function makeWindow() {
     webPreferences: { preload: path.join(__dirname, "preload.cjs"), contextIsolation: true },
   });
   win.removeMenu();
-  win.loadURL(`http://127.0.0.1:${PORT}/`);
+  win.loadURL(`http://127.0.0.1:${activePort}/`);
 
   win.once("ready-to-show", () => {
     win.show();
@@ -64,18 +67,24 @@ function makeWindow() {
   // A link to anything outside the studio opens in the real browser, never
   // inside the app window.
   win.webContents.setWindowOpenHandler(({ url }) => {
-    if (!url.startsWith(`http://127.0.0.1:${PORT}`)) { shell.openExternal(url); return { action: "deny" }; }
+    if (!url.startsWith(`http://127.0.0.1:${activePort}`)) { shell.openExternal(url); return { action: "deny" }; }
     return { action: "allow" };
   });
 }
 
-/** Wait until the server answers, rather than guessing with a timer. */
+/**
+ * Wait until the server answers, rather than guessing with a timer. The server
+ * runs in-process and publishes the port it actually bound on a global (it may
+ * have stepped past 4300 if that was taken), so read that first, then confirm
+ * the port is live with a health check.
+ */
 async function waitForServer(timeoutMs = 20000) {
   const deadline = Date.now() + timeoutMs;
   while (Date.now() < deadline) {
+    const port = global.__DIGILABS_PORT || PORT;
     try {
-      const r = await fetch(`http://127.0.0.1:${PORT}/api/health`, { signal: AbortSignal.timeout(1500) });
-      if (r.ok) return await r.json();
+      const r = await fetch(`http://127.0.0.1:${port}/api/health`, { signal: AbortSignal.timeout(1500) });
+      if (r.ok) { activePort = port; return await r.json(); }
     } catch { /* not up yet */ }
     await new Promise((r) => setTimeout(r, 300));
   }

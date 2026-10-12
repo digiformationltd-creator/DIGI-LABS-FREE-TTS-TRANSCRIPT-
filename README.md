@@ -83,9 +83,37 @@ Published under the **DIGIFORMATION LTD Source-Available & Studio License** (Apa
 
 ---
 
-## 🏢 Official Company & Contact Directory
+## 🏢 Corporate Provenance & Leadership
 
-**DIGI LABS** is proudly developed, maintained, and open-sourced by **DIGIFORMATION LTD**:
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="220">
+        <img src="assets/founder-haroon.png" alt="Muhammad Haroon - Founder & CEO, DIGIFORMATION LTD" width="170" style="border-radius: 12px;" />
+        <br />
+        <strong>Muhammad Haroon</strong>
+        <br />
+        <sub>Founder & CEO, DIGIFORMATION LTD</sub>
+      </td>
+      <td valign="middle">
+        <img src="assets/digiformation-logo-official.png" alt="DIGIFORMATION LTD Logo" width="210" />
+        <br /><br />
+        <strong>DIGI LABS</strong> is engineered and open-sourced by <strong>DIGIFORMATION LTD</strong> — a registered UK corporate entity providing agentic AI architecture and sovereign digital infrastructure.
+        <br /><br />
+        🌐 <strong>Corporate Website:</strong> <a href="https://www.digiformation.co.uk/">https://www.digiformation.co.uk/</a><br />
+        🏢 <strong>UK Company Registry:</strong> Company # 16994903 (England & Wales)<br />
+        💬 <strong>WhatsApp Hotline:</strong> <a href="https://wa.me/923164467464">+92 316 4467464 (03164467464)</a><br />
+        📧 <strong>Official Email:</strong> <a href="mailto:info@digiformation.co.uk">info@digiformation.co.uk</a><br />
+        📺 <strong>YouTube Channel:</strong> <a href="https://www.youtube.com/@Digiformationltd">@Digiformationltd</a><br />
+        🌳 <strong>All Verified Links:</strong> <a href="https://linktr.ee/digiformationltd">linktr.ee/digiformationltd</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 📞 Official Contact & Support Directory
 
 - **Primary WhatsApp Support Hotline:** [+92 316 4467464 (03164467464)](https://wa.me/923164467464?text=Hello%20DIGIFORMATION%20LTD%2C%20I%20am%20using%20DIGI%20LABS)
 - **Official Corporate Emails:** [info@digiformation.co.uk](mailto:info@digiformation.co.uk) • [info@digibizos.co.uk](mailto:info@digibizos.co.uk)
@@ -95,4 +123,5 @@ Published under the **DIGIFORMATION LTD Source-Available & Studio License** (Apa
 - **Official Linktree (All Verified Channels):** [https://linktr.ee/digiformationltd](https://linktr.ee/digiformationltd)
 
 © 2026 DIGIFORMATION LTD. All Rights Reserved. Registered in England & Wales (Company # 16994903).
+
 

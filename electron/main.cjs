@@ -7,7 +7,7 @@
  * closed, which is a real problem in the Digi Biz OS build and worth not
  * repeating.
  */
-const { app, BrowserWindow, ipcMain, dialog, shell } = require("electron");
+const { app, BrowserWindow, ipcMain, dialog, shell, screen } = require("electron");
 const fs = require("node:fs");
 const path = require("node:path");
 
@@ -41,8 +41,20 @@ function makeSplash() {
 }
 
 function makeWindow() {
+  // Fit the window INSIDE the screen's work area. A frameless window at a fixed
+  // 840px tall runs off the bottom of smaller or scaled displays (e.g. a
+  // 1366×768 laptop has only ~728px of usable height), so the rounded card's
+  // bottom edge ends up below the visible screen — the "out of the box, no
+  // bottom boundary" bug. Clamp to the work area (with a small margin) and
+  // centre, so the whole rounded card is always on screen.
+  const { width: waW, height: waH } = screen.getPrimaryDisplay().workAreaSize;
+  const winW = Math.min(1280, waW - 40);
+  const winH = Math.min(840, waH - 40);
+
   win = new BrowserWindow({
-    width: 1280, height: 840, minWidth: 1000, minHeight: 700,
+    width: winW, height: winH, minWidth: Math.min(1000, winW), minHeight: Math.min(700, winH),
+    maxHeight: waH,
+    center: true,
     // Frameless and transparent so the page can paint its own rounded card and
     // the desktop shows through at the corners. The app draws its own window
     // controls (the three buttons top-right), wired through the preload.

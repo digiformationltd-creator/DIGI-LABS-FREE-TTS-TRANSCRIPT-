@@ -27,6 +27,33 @@ function geminiKeys() {
 const GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 const CHAT_MODELS = () => [process.env.GEMINI_CHAT_MODEL, "gemini-flash-lite-latest", "gemini-flash-latest"].filter(Boolean);
 
+// ── Cloudflare Workers AI (PRIMARY, keyless for the user) ────────────────────
+// This is the SAME upstream Digi Biz OS runs its AI on: a real model served from
+// the app's own Cloudflare account, OpenAI-compatible. It needs no per-user
+// Gemini key, which is why notes / forms / video→prompt work out of the box here
+// exactly as they do in Digi Biz OS. Gemini stays as a secondary fallback.
+const cfAccount = () => (process.env.CLOUDFLARE_ACCOUNT_ID || "").trim();
+const cfToken = () => (process.env.CLOUDFLARE_API_TOKEN || "").trim();
+const CF_TEXT_MODEL = () => process.env.CLOUDFLARE_MODEL || "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+const CF_VISION_MODEL = () => process.env.CLOUDFLARE_VISION_MODEL || "@cf/meta/llama-3.2-11b-vision-instruct";
+function cfReady() { return !!(cfAccount() && cfToken()); }
+
+/** One OpenAI-compatible completion on Cloudflare Workers AI. */
+async function cfChatRaw(messages, { model, maxTokens = 4000, temperature = 0.4, timeoutMs = 150000 } = {}) {
+  if (!cfReady()) return "";
+  try {
+    const r = await fetch(`https://api.cloudflare.com/client/v4/accounts/${cfAccount()}/ai/v1/chat/completions`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${cfToken()}` },
+      body: JSON.stringify({ model: model || CF_TEXT_MODEL(), messages, max_tokens: maxTokens, temperature }),
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    if (!r.ok) return "";
+    const d = await r.json();
+    return String(d?.choices?.[0]?.message?.content || "").trim();
+  } catch { return ""; }
+}
+
 function parseJson(text) {
   const s = String(text || "").replace(/```(?:json)?/gi, "").trim();
   const a = s.search(/[{[]/); if (a < 0) return null;
@@ -40,10 +67,22 @@ function geminiText(d) {
   return parts.map((p) => p?.text || "").join("").trim();
 }
 
-/** One text completion over the Gemini keys × models (native endpoint). */
+/** One text completion — Cloudflare Workers AI first, then Gemini as fallback. */
 async function chat(system, user, opts = {}) {
+  // PRIMARY: Cloudflare Workers AI (the Digi Biz OS upstream — no user key needed).
+  if (cfReady()) {
+    const out = await cfChatRaw(
+      [{ role: "system", content: system }, { role: "user", content: user }],
+      { maxTokens: opts.maxTokens ?? 4000, temperature: opts.temperature ?? 0.4, timeoutMs: opts.timeoutMs ?? 150000 },
+    );
+    if (out) return out;
+  }
+  // FALLBACK: Gemini native (only if keys are present and valid).
   const keys = geminiKeys();
-  if (!keys.length) throw new Error("No Gemini key — add one in Settings.");
+  if (!keys.length) {
+    if (cfReady()) throw new Error("AI busy — please try again.");
+    throw new Error("No AI configured — add a Cloudflare or Gemini key in Settings.");
+  }
   let lastErr = "";
   for (const model of CHAT_MODELS()) {
     for (const key of keys) {
@@ -73,6 +112,14 @@ async function chat(system, user, opts = {}) {
 async function describeImage(dataUri, instruction, maxTokens = 1000) {
   const m = /^data:([^;]+);base64,(.*)$/.exec(dataUri || "");
   if (!m) return null;
+  // PRIMARY: Cloudflare Workers AI vision (OpenAI-compatible image_url).
+  if (cfReady()) {
+    const out = await cfChatRaw(
+      [{ role: "user", content: [{ type: "text", text: instruction }, { type: "image_url", image_url: { url: dataUri } }] }],
+      { model: CF_VISION_MODEL(), maxTokens, temperature: 0.2, timeoutMs: 90000 },
+    );
+    if (out) return { text: out, model: CF_VISION_MODEL() };
+  }
   const keys = geminiKeys();
   for (const model of CHAT_MODELS()) {
     for (const key of keys) {
@@ -249,4 +296,10 @@ async function videoToPrompt(ffmpeg, file, transcript, meta, onProgress) {
   }
 }
 
-module.exports = { linkTranscript, transcriptToDoc, videoToPrompt, geminiKeyCount: () => geminiKeys().length };
+module.exports = {
+  linkTranscript, transcriptToDoc, videoToPrompt,
+  geminiKeyCount: () => geminiKeys().length,
+  // AI is ready if EITHER Cloudflare Workers AI (primary) or a Gemini key is set.
+  aiReady: () => cfReady() || geminiKeys().length > 0,
+  cfReady,
+};

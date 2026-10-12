@@ -404,7 +404,7 @@ app.post("/api/media/start", (req, res) => {
   })();
 });
 
-app.get("/api/media/ready", (_req, res) => res.json({ ok: true, gemini_keys: mediaIntel.geminiKeyCount(), python: !!python(), ffmpeg: !!ffmpeg() }));
+app.get("/api/media/ready", (_req, res) => res.json({ ok: true, ai_ready: mediaIntel.aiReady(), cloudflare: mediaIntel.cfReady(), gemini_keys: mediaIntel.geminiKeyCount(), python: !!python(), ffmpeg: !!ffmpeg() }));
 
 // ── Settings ─────────────────────────────────────────────────────────────────
 // Keys are written to data/.env, which is the studio's own file. Values are

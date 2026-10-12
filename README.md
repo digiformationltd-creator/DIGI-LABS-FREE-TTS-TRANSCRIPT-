@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="banner.png" alt="DIGI LABS vs ElevenLabs - Free & Open Source AI Voice Studio" width="100%">
+</p>
+
 # DIGI LABS — Unlimited Free Human TTS & Video-to-Prompt Studio
 ### The Sovereign Open-Source ElevenLabs Alternative & Media Reverse-Engineering Engine
 

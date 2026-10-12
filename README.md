@@ -12,6 +12,9 @@
   <a href="https://www.digibizos.co.uk/open-source/digi-labs">
     <img src="https://img.shields.io/badge/⚡_Download_Windows_Setup-.exe_(253MB)-10b981?style=for-the-badge" alt="Download Windows Installer" />
   </a>
+  <a href="https://aistudio.google.com/app/apikey">
+    <img src="https://img.shields.io/badge/🔑_Get_Free_Gemini_API_Key-Google_AI_Studio-f59e0b?style=for-the-badge" alt="Get Free Gemini API Key" />
+  </a>
 </p>
 
 > [!TIP]
@@ -64,7 +67,19 @@ npm run dist
 
 ---
 
-## 🔑 Multi-Key Rotation System (Never Run Out of Quota)
+## 🔑 How to Get Your Free Gemini API Key (3 Simple Steps)
+
+Gemini 2.5 Flash Studio Voice requires a Google AI Studio API key. Google provides **100% free API access with zero credit card or billing requirements**:
+
+1. **Open Google AI Studio**: Go directly to [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) and sign in with any standard Google or Gmail account.
+2. **Create API Key (1-Click)**: Click the blue **"+ Create API key"** button on the top right, select **"Create key in new project"**, and copy your secret key string (starts with `AIzaSy...`).
+3. **Paste into DIGI LABS**: Open DIGI LABS on your PC, click **Settings (⚙️ Gear Icon)**, paste your key into **"Gemini API Key"**, and click Save.
+
+> 💡 **Direct Shortcut:** 👉 [**Click Here to Get Your Free Gemini API Key on Google AI Studio ↗**](https://aistudio.google.com/app/apikey)
+
+---
+
+### Multi-Key Rotation System (Never Run Out of Quota)
 
 Add multiple free Gemini API keys in Settings. DIGI LABS automatically balances and rotates through up to 9 key slots:
 

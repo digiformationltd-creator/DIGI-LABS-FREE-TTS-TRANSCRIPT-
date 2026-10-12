@@ -2,15 +2,18 @@
   <img src="banner.png" alt="DIGI LABS vs ElevenLabs - Free & Open Source AI Voice Studio" width="100%">
 </p>
 
-# DIGI LABS — Unlimited Free Human TTS & Video-to-Prompt Studio
+# DIGI LABS — Unlimited Free Human TTS, Video-to-Prompt & Course Studio
 ### The Sovereign Open-Source ElevenLabs Alternative & Media Reverse-Engineering Engine
 
 <p align="center">
   <a href="https://www.digibizos.co.uk/open-source/digi-labs">
     <img src="https://img.shields.io/badge/🌐_Official_Portal-DIGI_BIZ_OS-7c3aed?style=for-the-badge" alt="Official DIGI BIZ OS Portal" />
   </a>
-  <a href="https://www.digibizos.co.uk/open-source/digi-labs">
+  <a href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe">
     <img src="https://img.shields.io/badge/⚡_Download_Windows_Setup-.exe_(253MB)-10b981?style=for-the-badge" alt="Download Windows Installer" />
+  </a>
+  <a href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/tag/v1.0.0">
+    <img src="https://img.shields.io/badge/📦_Latest_Release-v1.0.0-06b6d4?style=for-the-badge" alt="Latest GitHub Release" />
   </a>
   <a href="https://aistudio.google.com/app/apikey">
     <img src="https://img.shields.io/badge/🔑_Get_Free_Gemini_API_Key-Google_AI_Studio-f59e0b?style=for-the-badge" alt="Get Free Gemini API Key" />
@@ -18,34 +21,59 @@
 </p>
 
 > [!TIP]
-> 📥 **Direct Windows Installer Setup (.exe 253MB):**  
-> Standalone Windows setup file and instant downloads are hosted on our official DIGI BIZ OS portal:  
-> 👉 **[https://www.digibizos.co.uk/open-source/digi-labs](https://www.digibizos.co.uk/open-source/digi-labs)**
+> 📥 **Quick Download Links (Windows 10 & 11 Native):**  
+> • **[Download Windows Setup (.exe 253MB) Direct ↗](https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe)**  
+> • **[Portable Unpacked Version (.zip 358MB) ↗](https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip)**  
+> • **[Official Web Portal, Setup Guides & Comparison ↗](https://www.digibizos.co.uk/open-source/digi-labs)**
 
-DIGI LABS is a standalone, ultra-realistic desktop voice and media intelligence workstation created by DigiFormation Ltd. It delivers human-grade voice synthesis (Gemini 2.5 Flash Voice & Edge-TTS) with zero monthly fees, alongside a revolutionary **Video-to-Prompt & Course Extraction Engine**.
+---
+
+DIGI LABS is a standalone, ultra-realistic desktop voice and media intelligence workstation created by **DigiFormation Ltd**. It delivers human-grade voice synthesis (Gemini 2.5 Flash Voice & Edge-TTS) with zero monthly fees, alongside a revolutionary **Video-to-Prompt, Course Generator & Media Intelligence Engine**.
 
 ---
 
 ## 🚀 Key Highlights & Capabilities
 
 ### 1. Dual Audio Synthesis Engines (Zero-Cost ElevenLabs Alternative)
-- **Studio Voice (Gemini 2.5 Flash)**: Ultra-expressive, nuanced, breathing human voice with emotion and multi-key auto-rotation.
-- **Free Voice (Edge-TTS)**: 100% Unlimited long-form audiobook and narration engine with zero API key requirement.
-- **Multilingual Excellence**: Native English, Urdu (with RTL Nastaliq toggle), Hindi, and Arabic vocal presets.
+- **Free Voice (Edge-TTS)**: 100% Unlimited long-form audiobook and narration engine with **zero API key requirement** and zero character limits.
+- **Studio Voice (Gemini 2.5 Flash)**: Hyper-realistic human voice with emotional inflection, natural breathing pauses, and multi-key auto-rotation.
+- **Multilingual Excellence**: Native English, Urdu (with 1-click Nastaliq typography editor toggle), Hindi, and Arabic vocal presets.
+- **Save $264 – $1,188/Year**: Completely eliminate recurring ElevenLabs, Murf AI, and Descript subscription taxes.
 
-### 2. Video-to-Prompt & Course Engine (Reverse-Engineer Any Video)
-- **Turn Any Video Link into an AI Prompt**: Paste any YouTube/MP4 link to extract the exact cinematic prompt, camera direction, lighting, and scene structure to regenerate with Sora, Runway Gen-3, Kling, or Midjourney.
-- **Instant Course Generator**: Convert 1-hour lectures into modular, structured step-by-step masterclasses.
-- **Executive Study Guides & Notes**: Extract actionable takeaways, checklists, and executive summaries from any video.
-- **Word-for-Word Transcription**: Local Whisper-powered speech-to-text with timestamped accuracy.
+### 2. Media Intelligence Engine (Built-in Cloudflare Workers AI)
+> ⚡ **Zero Setup Required:** Media Intelligence runs on high-speed Cloudflare Workers AI upstream out-of-the-box, meaning you do **not** need a personal Gemini key to generate notes, courses, or video prompts! (Gemini key is kept as an optional fallback).
 
-### 3. Desktop Workstation (Windows 10 & 11 Native)
-- Built on high-performance Electron + Express + Node.js backend with local FFmpeg media processing.
-- Clean dark-mode interface with job queues and real-time generation progress.
+- **Turn Any Video Link into AI Prompts**: Paste any YouTube link or video file to reverse-engineer cinematic visual prompts, camera pacing, lighting direction, and scene structure for regeneration in Sora, Runway Gen-3, Kling, or Midjourney.
+- **Instant Course Generator**: Convert 1-hour lectures or webinars into structured, modular chapter-by-chapter masterclasses.
+- **Executive Study Guides & Notes**: Extract actionable summaries, checklists, and key takeaways from any video in seconds.
+- **Word-for-Word Transcription**: Local Whisper-powered speech-to-text with timestamped accuracy, plus instant online caption reading.
+
+### 3. Clean & Effects Studio
+- **Audio Repair & Polish**: Fix muffled recordings, apply high-pass/low-pass filters, and normalize vocal tracks.
+- **Local Transcoding**: Built-in local FFmpeg engine for fast MP3 export and format transcoding on your local SSD.
+
+### 4. Desktop Workstation (Windows 10 & 11 Native)
+- Built on high-performance Electron + Express + Node.js backend.
+- Frameless dark-mode interface carefully budgeted to fit inside standard laptop and desktop display viewports without clipping.
+- Real-time wave visualizer, seekable playback, and generation job tracking.
 
 ---
 
-## 🛠️ Quick Start & Installation
+## 🔑 Quick Setup Guide
+
+### Want Free Voice & Media Intelligence?
+**Zero setup required!** Simply launch DIGI LABS. Both **Free Voice (Edge-TTS)** and the **Media Intelligence Engine (Video-to-Prompt, Courses & Notes)** work immediately out of the box with zero keys or configurations.
+
+### Want Studio Voice (Gemini 2.5 Flash)? Follow 3 Simple Steps:
+1. **Open Settings**: Click **Settings (⚙️ Gear Icon)** in the top navigation bar.
+2. **Get Free Key**: Click the [**Get a free key**](https://aistudio.google.com/app/apikey) button to open Google AI Studio, click **"+ Create API key"**, and copy your free key (no credit card or billing required).
+3. **Paste & Save**: Paste your key into the **Gemini API Key** field, click **Save**, and unlock ultra-expressive human voice synthesis instantly!
+
+> 💡 **Multi-Key Auto-Rotation:** You can save multiple free keys (up to 9 key slots). DIGI LABS automatically balances and rotates through them when daily quotas are reached so your generation never stops.
+
+---
+
+## 🛠️ Developer Setup (Run From Source)
 
 ```bash
 # Clone the repository
@@ -55,58 +83,37 @@ cd DIGI-LABS-FREE-TTS-TRANSCRIPT-
 # Install dependencies
 npm install
 
-# Option A: Run the Studio Server (Web UI on http://127.0.0.1:4300)
-npm run server
-
-# Option B: Launch the Native Desktop Workstation
+# Option A: Launch the Native Desktop Workstation (Electron)
 npm start
 
-# Option C: Build the Windows NSIS Installer (.exe)
+# Option B: Run the Studio Server (Web UI at http://127.0.0.1:4300)
+npm run server
+
+# Option C: Build the Standalone Windows NSIS Installer (.exe)
 npm run dist
 ```
 
 ---
 
-## 🔑 Super Simple Setup: 3 Easy Steps
-
-1. **Install the app and go to the Settings section**: Download and install DIGI LABS on your PC, then click **Settings (⚙️ Gear Icon)** in the top bar.
-2. **Press 'Get API Key' & generate your key**: Click the [**Get API Key**](https://aistudio.google.com/app/apikey) button to open Google AI Studio, click **"+ Create API key"**, and copy your free key in 1 click (no credit card or billing required).
-3. **Paste key & start using**: Paste your key into the **Gemini API Key** field, click **Save**, and start using DIGI LABS immediately!
-
-> 💡 **Direct Shortcut:** 👉 [**Click Here to Get API Key on Google AI Studio ↗**](https://aistudio.google.com/app/apikey)
-
----
-
-### Multi-Key Rotation System (Never Run Out of Quota)
-
-Add multiple free Gemini API keys in Settings. DIGI LABS automatically balances and rotates through up to 9 key slots:
-
-```env
-GEMINI_TTS_KEY
-GEMINI_OPENCODE_KEY
-GEMINI_UTILITY_KEY
-GEMINI_API_KEY_1 ... GEMINI_API_KEY_5
-GEMINI_API_KEY
-```
-
-When one key reaches its daily rate limit, DIGI LABS seamlessly shifts to the next key without failing your audio generation.
-
----
-
 ## 📦 System Requirements
 
-- **OS**: Windows 10 / 11 (64-bit), macOS, or Linux
-- **Runtime**: Node.js 18+ & Python 3.10+
-- **Media Engine**: FFmpeg (for clip joining and format transcoding)
+| Specification | Minimum Requirement | Recommended |
+|---|---|---|
+| **Operating System** | Windows 10 (64-bit, 20H2+) | Windows 11 (64-bit, Latest Build) |
+| **Processor** | Intel Core i5 / AMD Ryzen 5 | Intel Core i7 / AMD Ryzen 7 |
+| **Memory (RAM)** | 4 GB RAM | 8 GB+ RAM |
+| **Storage** | 500 MB free SSD storage | 2 GB free SSD storage |
+| **Runtime (Source)**| Node.js 18+ & Python 3.10+ | Node.js 20+ & Python 3.11+ |
+| **Installer** | Standalone .exe (No runtime needed) | Standalone .exe installer |
 
 ---
 
 ## 🛡️ License, Terms & Strict Resale Prohibition
 
-Published under the **DIGIFORMATION LTD Source-Available & Studio License** (Apache 2.0 / MIT Core Engine).
+Published under the **DIGIFORMATION LTD Source-Available & Studio License**.
 
-- ✅ **100% Free For Your Own System**: Free forever for your personal PC, agency workstation, and content creation workflow. Generate unlimited client audiobooks, podcasts, videos, and prompts. Keep 100% of your commercial client earnings.
-- ❌ **STRICTLY NO RESELLING**: Reselling this software, selling modified binaries, white-labeling, or re-hosting it as a paid commercial cloud SaaS is strictly prohibited. Exactly like DIGI LEAD HUNTER, this software is open-source/source-available exclusively for direct use on your own local machines.
+- ✅ **100% Free For Your Own System**: Free forever for your personal PC, freelance setup, and agency workstations. Generate unlimited audiobooks, podcasts, client voiceovers, videos, and study guides. Keep 100% of your client revenue.
+- ❌ **STRICTLY NO RESELLING**: Reselling this software, selling modified installer binaries, white-labeling, or re-hosting it as a paid commercial cloud SaaS is strictly prohibited. Exactly like DIGI LEAD HUNTER, this software is open-source/source-available exclusively for direct usage on your own machines.
 
 ---
 
@@ -125,7 +132,7 @@ Published under the **DIGIFORMATION LTD Source-Available & Studio License** (Apa
         <sub>Company # 16994903</sub>
       </td>
       <td valign="middle">
-        <strong>DIGI LABS</strong> is engineered and open-sourced by <strong>DIGIFORMATION LTD</strong> — a registered UK corporate entity providing agentic AI architecture and sovereign digital infrastructure.
+        <strong>DIGI LABS</strong> is engineered and open-sourced by <strong>DIGIFORMATION LTD</strong> — a registered UK corporate entity providing autonomous agentic AI architecture and sovereign digital infrastructure.
         <br /><br />
         🌐 <strong>Corporate Website:</strong> <a href="https://www.digiformation.co.uk/">https://www.digiformation.co.uk/</a><br />
         🏢 <strong>UK Company Registry:</strong> Company # 16994903 (England & Wales)<br />
@@ -150,5 +157,3 @@ Published under the **DIGIFORMATION LTD Source-Available & Studio License** (Apa
 - **Official Linktree (All Verified Channels):** [https://linktr.ee/digiformationltd](https://linktr.ee/digiformationltd)
 
 © 2026 DIGIFORMATION LTD. All Rights Reserved. Registered in England & Wales (Company # 16994903).
-
-

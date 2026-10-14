@@ -34,7 +34,7 @@ Traditional mechanical TTS systems (such as Edge-TTS) were deliberately excluded
   - `Promo` — Energetic, high-impact hook delivery for viral shorts, reels, and ads.
   - `Explainer` — Friendly, clear instructional tone for tutorials and educational courses.
   - `Calm` — Soothing, slow cadence for bedtime stories and mindfulness content.
-- **Natural Character Presets (Men & Women)**: Distinct vocal profiles (`Charon`, `Puck`, `Fenrir`, `Orus`, and multilingual variants) covering different resonance, warmth, and depth.
+- **Studio Character Presets**: Distinct vocal profiles (`Charon` — deep & steady, `Puck` — bright & lively, `Fenrir` — weighty & serious, `Orus` — warm & even) covering diverse resonance, cadence, and depth.
 - **Private Direct BYOK**: Connects directly from your PC to Google AI Studio with your own free API key. Zero cloud middleman, zero proxies, zero telemetry, and zero subscription taxes.
 
 ---

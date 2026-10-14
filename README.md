@@ -116,6 +116,46 @@ DIGI LABS is released as a **Source-Available Free Application**:
 
 ## 🏢 Maintainers & Community
 
-Maintained with ❤️ by **Digiformation Ltd** (UK Company # 16994903).  
-- **Documentation & Web Portal:** [digibizos.co.uk/open-source/digi-labs](https://www.digibizos.co.uk/open-source/digi-labs)  
-- **Issues & Contributions:** Feel free to open an Issue or Pull Request on GitHub.
+**DIGI LABS** is engineered, maintained, and open-sourced by **DIGIFORMATION LTD** — a registered UK corporate entity providing autonomous agentic AI architecture and sovereign digital infrastructure.
+
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td width="30%" align="center" valign="middle">
+        <a href="https://www.digiformation.co.uk/">
+          <img src="assets/digiformation-logo-black.png" alt="DIGIFORMATION LTD Logo" width="160" />
+        </a>
+        <br /><br />
+        <strong>DIGIFORMATION LTD</strong>
+        <br />
+        <sub>Company # 16994903</sub>
+      </td>
+      <td valign="middle">
+        🌐 <strong>Corporate Website:</strong> <a href="https://www.digiformation.co.uk/">https://www.digiformation.co.uk/</a><br />
+        🏢 <strong>UK Company Registry:</strong> Company # 16994903 (England & Wales)<br />
+        💬 <strong>WhatsApp Hotline:</strong> <a href="https://wa.me/923164467464">+92 316 4467464 (03164467464)</a><br />
+        📧 <strong>Official Email:</strong> <a href="mailto:info@digiformation.co.uk">info@digiformation.co.uk</a> • <a href="mailto:info@digibizos.co.uk">info@digibizos.co.uk</a><br />
+        📺 <strong>YouTube Channel:</strong> <a href="https://www.youtube.com/@Digiformationltd">@Digiformationltd</a> • <a href="https://www.youtube.com/@digibizos">@digibizos</a><br />
+        🚀 <strong>Digi Biz OS Ecosystem:</strong> <a href="https://www.digibizos.co.uk/">https://www.digibizos.co.uk/</a><br />
+        🌳 <strong>All Verified Channels:</strong> <a href="https://linktr.ee/digiformationltd">linktr.ee/digiformationltd</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 📞 Official Contact & Support Directory
+
+- **Primary WhatsApp Support Hotline:** [+92 316 4467464 (03164467464)](https://wa.me/923164467464?text=Hello%20DIGIFORMATION%20LTD%2C%20I%20am%20using%20DIGI%20LABS)
+- **Official Corporate Emails:** [info@digiformation.co.uk](mailto:info@digiformation.co.uk) • [info@digibizos.co.uk](mailto:info@digibizos.co.uk)
+- **Companies House UK Registry:** [Company # 16994903 (Official UK Government Registry)](https://find-and-update.company-information.service.gov.uk/company/16994903)
+- **DIGIFORMATION LTD Corporate Website:** [https://www.digiformation.co.uk/](https://www.digiformation.co.uk/)
+- **Digi Biz OS Web Portal & Docs:** [https://www.digibizos.co.uk/open-source/digi-labs](https://www.digibizos.co.uk/open-source/digi-labs)
+- **Official Linktree (All Verified Channels):** [https://linktr.ee/digiformationltd](https://linktr.ee/digiformationltd)
+- **Bug Reports & Feature Requests:** Feel free to open an Issue or Pull Request on GitHub.
+
+<p align="center">
+  <sub>© 2026 DIGIFORMATION LTD. All Rights Reserved. Registered in England & Wales (Company # 16994903).</sub>
+</p>
+

@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="banner.png" alt="DIGI LABS - Free Studio Human Voice & Media Workstation" width="100%">
+  <img src="banner.png" alt="DIGI LABS - Free TTS (Text-to-Speech) & Human Voice Studio" width="100%">
 </p>
 
-# DIGI LABS: Free Desktop Human Voice & Media Studio
-> **Broadcast-grade human speech synthesis powered 100% by Google Gemini 2.5 Flash Studio Voice, with built-in Video-to-Prompt reverse engineering and local Whisper transcription.**
+# DIGI LABS: Free TTS (Text-to-Speech) & Human Voice Studio
+> **Broadcast-grade Free Text-to-Speech (TTS) powered 100% by Google Gemini 2.5 Flash Studio Voice, with built-in Video-to-Prompt reverse engineering and local Whisper transcription.**
 
 <p align="center">
   <a href="https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe">
@@ -20,14 +20,27 @@
 
 ---
 
-## 🎙️ 100% Authentic Human Voice (Google Gemini 2.5 Flash Studio Voice)
+## 🎯 Who Is DIGI LABS Built For?
 
-Unlike conventional text-to-speech tools that sound mechanical or robotic, **DIGI LABS runs exclusively on Google Gemini 2.5 Flash Studio Voice (`gemini-2.5-flash-preview-tts`)**. 
+DIGI LABS is engineered specifically for creators, businesses, and educators who need authentic human audio without the punishing $22–$99/month subscription fees and character caps of commercial TTS platforms:
 
-Traditional mechanical TTS systems (such as Edge-TTS) were deliberately excluded from the voice generation pipeline because they lack emotional depth and sound robotic. In DIGI LABS, every clip is synthesized with authentic human breathing, vocal timbre, and natural cadence.
+- 🎬 **Content Creators, YouTubers & Reel Makers**: Perfect for faceless YouTube channels, TikTok/Instagram reels, and documentary creators who want high-production-value human voiceovers without needing an expensive microphone, soundproof studio, or recording their own voice.
+- 💼 **Business Marketers & Agency Owners**: Generate confident corporate voiceovers for product launch videos, software demos, pitch decks, and high-impact social media ads using the dedicated `Business` and `Promo` vocal delivery styles.
+- 🎙️ **Urdu Creators & Regional Storytellers**: Specially tailored for creators who need expressive, culturally nuanced Urdu speech synthesis with natural cadence, paired with an instant 1-click **RTL Nastaliq typography editor** for effortless script writing.
+- 📚 **Audiobook Authors & Podcasters**: Convert entire book chapters, articles, and long-form literature into smooth, broadcast-ready MP3s with natural breathing pauses, avoiding the mechanical monotony of traditional text-to-speech.
+- 🎓 **Educators & Online Course Creators**: Transform written lecture notes, training manuals, and syllabi into engaging instructional voice tracks using the clear, unhurried `Explainer` delivery tone.
+- ⚡ **Indie Hackers & Media Producers**: Combine human voiceover with our built-in **Video-to-Prompt Engine** to reverse-engineer viral videos, extract production cues for Sora/Runway, and produce complete multimedia content for $0.
 
-### Key Audio Features:
-- **Direct Studio PCM Audio**: Synthesizes uncompressed 24kHz 16-bit raw PCM audio directly from Google AI Studio, mastered to MP3 via bundled local static FFmpeg.
+---
+
+## 🎙️ 100% Authentic Human Voice (Google Gemini 2.5 Flash Free TTS)
+
+Traditional mechanical text-to-speech (TTS) engines sound flat, robotic, and lifeless. **DIGI LABS is powered exclusively by Google Gemini 2.5 Flash Studio Voice (`gemini-2.5-flash-preview-tts`)** — generating rich, emotionally dynamic human speech.
+
+Every voice track is synthesized with realistic breathing pauses, natural pitch variation, and authentic human cadence directly from your desktop.
+
+### Key Free TTS Features:
+- **Direct Studio PCM Audio**: Synthesizes uncompressed 24kHz 16-bit raw PCM audio directly from Google AI Studio, mastered locally to 192kbps MP3 via bundled static FFmpeg.
 - **5 Expressive Delivery Styles**:
   - `Normal` *(Default)* — Natural, authentic narration for audiobooks, documentaries, and long-form scripts.
   - `Business` — Polished, confident corporate delivery for brand presentations and client demos.
@@ -35,13 +48,14 @@ Traditional mechanical TTS systems (such as Edge-TTS) were deliberately excluded
   - `Explainer` — Friendly, clear instructional tone for tutorials and educational courses.
   - `Calm` — Soothing, slow cadence for bedtime stories and mindfulness content.
 - **Studio Character Presets**: Distinct vocal profiles (`Charon` — deep & steady, `Puck` — bright & lively, `Fenrir` — weighty & serious, `Orus` — warm & even) covering diverse resonance, cadence, and depth.
+- **Intelligent Sentence-Safe Splicing**: Long passages are automatically segmented at natural punctuation pauses (`. `, `۔`, `!`, `?`, `\n`) up to 2,500 characters, rendered, and seamlessly joined via FFmpeg without cutting words mid-sentence.
 - **Private Direct BYOK**: Connects directly from your PC to Google AI Studio with your own free API key. Zero cloud middleman, zero proxies, zero telemetry, and zero subscription taxes.
 
 ---
 
 ## 🎬 Built-in Media Intelligence Workstation
 
-Beyond human voiceover synthesis, DIGI LABS features an integrated multimedia reverse-engineering suite:
+Beyond human text-to-speech (TTS), DIGI LABS features an integrated multimedia reverse-engineering suite:
 
 1. **Video-to-Prompt Reverse Engineering**: Paste any video link (YouTube, MP4) to extract camera motion cues, volumetric lighting setups, and production prompts for Sora, Runway Gen-3, Kling, or Midjourney.
 2. **Automated Course & Note Generator**: Transform 1-hour lectures or webinars into modular syllabi, chapter-by-chapter student notes, and executive summaries automatically.

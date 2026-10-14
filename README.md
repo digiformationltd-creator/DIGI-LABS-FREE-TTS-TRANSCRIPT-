@@ -2,8 +2,8 @@
   <img src="banner.png" alt="DIGI LABS - Free Multilingual & Urdu Voice Studio" width="100%">
 </p>
 
-# DIGI LABS: Free Desktop Voice & Media Studio (with Native Urdu Engine)
-> **High-speed, zero-cost voice synthesis for creators, developers, and educators. Powered by Edge-TTS, Gemini 2.5 Flash, and Local Whisper.**
+# DIGI LABS: Free Desktop Studio Voice & Media Workstation
+> **Broadcast-grade human speech synthesis powered directly by Google Gemini 2.5 Flash Studio Voice, with unlimited offline Free Voice (Edge-TTS) and local Whisper transcription.**
 
 <p align="center">
   <a href="https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe">
@@ -20,48 +20,48 @@
 
 ---
 
-## 🎧 Listen to Voice Samples (Urdu & English)
+## 🎙️ Flagship Engine: Google Gemini 2.5 Flash Studio Voice
 
-Hear the synthesis quality before downloading. Natural cadence, proper pronunciation, and clean audio across multiple male and female character variants:
+DIGI LABS harnesses **Google Gemini 2.5 Flash Preview TTS (`gemini-2.5-flash-preview-tts`)** to generate authentic, human-grade voiceovers with true breath control, emotional dynamic range, and natural pauses.
 
-| Vocal Preset | Engine | Language / Accent | Audio Profile |
-| :--- | :--- | :--- | :--- |
-| **اردو قدرتی بیانیہ (Urdu Natural Narration)** | Edge-TTS Neural | Urdu (Pakistan) | 🎙️ Clean narrative tone for audiobooks, stories & documentaries |
-| **اردو مکالماتی و پوڈکاسٹ (Urdu Conversational)** | Edge-TTS Multi-Variant | Urdu (Pakistan) | 🎙️ Expressive conversational pacing with 1-click Nastaliq support |
-| **English Expressive Storyteller** | Gemini 2.5 Flash Speech | English (Multilingual) | 🎙️ Realistic inflection, breathing pauses & cinematic depth |
+- **Direct Studio PCM Audio**: Synthesizes uncompressed 24kHz 16-bit raw PCM audio directly from Google AI Studio, mastered to MP3/WAV via local FFmpeg.
+- **5 Expressive Delivery Styles**:
+  - `Normal` — Balanced, authentic narration for documentaries and audiobooks.
+  - `Business` — Polished, confident corporate delivery for presentations and demos.
+  - `Promo` — Energetic, high-impact hook delivery for short-form ads and reels.
+  - `Explainer` — Friendly, clear instructional tone for tutorials and online courses.
+  - `Calm` — Slow, soothing cadence for wellness and bedtime storytelling.
+- **Diverse Character Timbers (Men & Women)**: Rich vocal presets (`Charon`, `Puck`, `Fenrir`, `Orus`, `Aoede`, `Kore`, etc.) covering varying resonance and pitches.
+- **Direct Private BYOK**: Connects directly from your desktop to Google AI Studio with your own free API key. Zero cloud proxies, zero telemetry, and zero subscription fees.
 
 ---
 
-## ⚡ What is DIGI LABS?
+## ⚡ Secondary Engine: Unlimited Free Voice (Edge-TTS)
 
-DIGI LABS is a standalone, frameless desktop workstation built on Electron, Node.js, and local FFmpeg. It is designed to bridge cutting-edge voice models with everyday creator workflows:
+For infinite long-form narration without an API key:
+- **Zero API Key Required**: 100% free with unlimited character volume.
+- **Native Urdu (اردو) & RTL Support**: Native Urdu accent with a 1-click Nastaliq typography editor toggle.
+- **40+ Languages & Dialects**: English, Urdu, Hindi, Arabic, Spanish, French, German, and more with male and female voice variants.
 
-### 1. Dual Audio Synthesis Engines
-- **Free Voice (Edge-TTS)**:
-  - 100% Free, unlimited character generation with **zero API key requirement**.
-  - Built-in support for **Urdu (اردو)** with a 1-click Nastaliq typography editor toggle.
-  - Multiple male and female voice variants across 40+ global languages (English, Urdu, Hindi, Arabic, Spanish, French, etc.) ready out of the box.
-- **Studio Voice (Google Gemini 2.5 Flash)**:
-  - Deep emotional inflection, whispered cadences, multiple character personas, and human-like speech flow.
-  - Connects securely using your own standard, free Google AI Studio API key.
+---
 
-### 2. Media Intelligence Engine
-- **Video-to-Prompt Reverse Engineering**: Paste any video link to extract camera pacing, lighting setups, scene structures, and visual generation prompts for Sora, Runway Gen-3, Kling, or Midjourney.
-- **Course & Summary Generator**: Automatically transform 1-hour lectures or webinars into modular, chapter-by-chapter courses and executive study notes.
-- **Speech-to-Text Transcription**: Powered by local Whisper processing for timestamped transcription.
+## 🎬 Built-in Media Intelligence Workstation
 
-### 3. Built-in Audio Repair Studio
-- **Audio Polish**: Apply local FFmpeg vocal filters: high-pass, low-pass, vocal normalization, and instant MP3/WAV export on your local SSD.
+Beyond voice synthesis, DIGI LABS provides three built-in media tools:
+
+1. **Video-to-Prompt Reverse Engineering**: Paste any video link (YouTube, MP4) to extract camera motion cues, volumetric lighting setups, and production prompts for Sora, Runway Gen-3, Kling, or Midjourney.
+2. **Automated Course & Note Generator**: Transform 1-hour lectures or webinars into modular syllabi, chapter-by-chapter student notes, and executive summaries automatically.
+3. **Local Whisper Speech-to-Text**: Generate word-for-word timestamped subtitles and transcripts locally on your PC.
 
 ---
 
 ## 🚀 Quick Start Guide
 
-### Option 1: Standalone Windows App (No Developer Setup Required)
+### Option 1: Standalone Windows App (Recommended)
 1. Download **[DIGI-LABS-Setup-1.0.0.exe](https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe)** (253MB).
 2. Run the installer. It launches directly from your Windows Start Menu.
-3. Select your voice (e.g., Urdu or English), type or paste your script, and click **Generate**.
-4. *(Optional)* For Studio Voice, open **Settings (⚙️)** and paste your free key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+3. In **Settings (⚙️)**, paste your free API key from [Google AI Studio](https://aistudio.google.com/app/apikey) for Studio Voice.
+4. Select your voice and emotional style, paste your script, and click **Generate**.
 
 ### Option 2: Run From Source (Developers)
 ```bash
@@ -75,7 +75,7 @@ npm install
 # Launch Electron desktop workstation
 npm start
 
-# Or launch local web server UI (http://localhost:4300)
+# Or launch local server UI (http://localhost:4300)
 npm run server
 
 # Build custom Windows NSIS installer
@@ -99,18 +99,18 @@ npm run dist
 
 ## 🛠️ Architecture & Transparency
 
-We believe in complete transparency about how DIGI LABS operates:
-- **Speech Synthesis**: Microsoft Edge-TTS (unlimited free tier) + Google Gemini 2.5 Flash Audio (via user's own API key).
-- **Audio Transcoding**: Static FFmpeg binaries bundled locally with the Electron shell.
-- **Privacy**: No telemetry, no centralized recording of your text or generated audio. Everything stays on your local machine.
+- **Primary Studio Engine**: Google Gemini 2.5 Flash Audio (`gemini-2.5-flash-preview-tts`) connecting directly via user's private Google AI Studio API key.
+- **Secondary Fallback Engine**: Microsoft Edge-TTS for unlimited offline zero-key narrations.
+- **Audio Processing**: Bundled local static FFmpeg for 24kHz raw PCM transcoding and loudness normalization.
+- **Privacy Guarantee**: Zero tracking, zero telemetry, and zero middleman servers. All scripts and audio files stay strictly on your local PC.
 
 ---
 
 ## ⚖️ License & Terms
 
 DIGI LABS is released as a **Source-Available Free Application**:
-- ✅ **100% Free For Personal & Commercial Content Creation**: Use it on your PC, agency workstations, and production rigs. Create commercial audiobooks, voiceovers, podcasts, and videos with total creative ownership.
-- ❌ **No Software Reselling or Cloud Re-hosting**: You may not sell copies of this installer, white-label the software, or host it as a paid cloud SaaS subscription service.
+- ✅ **100% Free For Personal & Commercial Production**: Generate unlimited commercial audiobooks, client voiceovers, YouTube videos, and podcasts. You keep 100% of your earnings.
+- ❌ **No Software Reselling or Cloud Re-hosting**: You may not sell copies of this installer, white-label the application, or host it as a paid cloud SaaS subscription service.
 
 ---
 
@@ -118,4 +118,4 @@ DIGI LABS is released as a **Source-Available Free Application**:
 
 Maintained with ❤️ by **Digiformation Ltd** (UK Company # 16994903).  
 - **Documentation & Web Portal:** [digibizos.co.uk/open-source/digi-labs](https://www.digibizos.co.uk/open-source/digi-labs)  
-- **Bug Reports & Feature Requests:** Feel free to open an Issue or Pull Request on GitHub.
+- **Issues & Contributions:** Feel free to open an Issue or Pull Request on GitHub.

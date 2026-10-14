@@ -22,13 +22,13 @@
 
 ## 🎧 Listen to Voice Samples (Urdu & English)
 
-Hear the synthesis quality before downloading. Natural cadence, proper pronunciation, and clean audio:
+Hear the synthesis quality before downloading. Natural cadence, proper pronunciation, and clean audio across multiple male and female character variants:
 
-| Vocal Preset | Engine | Language / Accent | Audio Sample |
+| Vocal Preset | Engine | Language / Accent | Audio Profile |
 | :--- | :--- | :--- | :--- |
-| **اردو بیانیہ (Urdu Male Narration)** | Edge-TTS (`ur-PK-AsadNeural`) | Urdu (Pakistan) | 🎙️ Clean narrative tone for audiobooks & documentaries |
-| **اردو مکالماتی (Urdu Female Conversational)** | Edge-TTS (`ur-PK-UzmaNeural`) | Urdu (Pakistan) | 🎙️ Natural conversational tone with Nastaliq editor support |
-| **English Expressive Storyteller** | Gemini 2.5 Flash Speech | English (US / Neutral) | 🎙️ Hyper-expressive inflection, breathing pauses & realism |
+| **اردو قدرتی بیانیہ (Urdu Natural Narration)** | Edge-TTS Neural | Urdu (Pakistan) | 🎙️ Clean narrative tone for audiobooks, stories & documentaries |
+| **اردو مکالماتی و پوڈکاسٹ (Urdu Conversational)** | Edge-TTS Multi-Variant | Urdu (Pakistan) | 🎙️ Expressive conversational pacing with 1-click Nastaliq support |
+| **English Expressive Storyteller** | Gemini 2.5 Flash Speech | English (Multilingual) | 🎙️ Realistic inflection, breathing pauses & cinematic depth |
 
 ---
 
@@ -40,9 +40,9 @@ DIGI LABS is a standalone, frameless desktop workstation built on Electron, Node
 - **Free Voice (Edge-TTS)**:
   - 100% Free, unlimited character generation with **zero API key requirement**.
   - Built-in support for **Urdu (اردو)** with a 1-click Nastaliq typography editor toggle.
-  - 40+ global languages (English, Hindi, Arabic, Spanish, French, etc.) ready out of the box.
+  - Multiple male and female voice variants across 40+ global languages (English, Urdu, Hindi, Arabic, Spanish, French, etc.) ready out of the box.
 - **Studio Voice (Google Gemini 2.5 Flash)**:
-  - Deep emotional inflection, whispered cadences, and human-like speech flow.
+  - Deep emotional inflection, whispered cadences, multiple character personas, and human-like speech flow.
   - Connects securely using your own standard, free Google AI Studio API key.
 
 ### 2. Media Intelligence Engine

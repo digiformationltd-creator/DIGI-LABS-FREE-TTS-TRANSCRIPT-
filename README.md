@@ -1,95 +1,84 @@
 <p align="center">
-  <img src="banner.png" alt="DIGI LABS vs ElevenLabs - Free & Open Source AI Voice Studio" width="100%">
+  <img src="banner.png" alt="DIGI LABS - Free Multilingual & Urdu Voice Studio" width="100%">
 </p>
 
-# DIGI LABS — Unlimited Free Human TTS, Video-to-Prompt & Course Studio
-### The Sovereign Open-Source ElevenLabs Alternative & Media Reverse-Engineering Engine
+# DIGI LABS: Free Desktop Voice & Media Studio (with Native Urdu Engine)
+> **High-speed, zero-cost voice synthesis for creators, developers, and educators. Powered by Edge-TTS, Gemini 2.5 Flash, and Local Whisper.**
 
 <p align="center">
+  <a href="https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe">
+    <img src="https://img.shields.io/badge/Download-Windows_Setup_(.exe_253MB)-00f5d4?style=for-the-badge&logo=windows&logoColor=black" alt="Download Windows Setup" />
+  </a>
+  <a href="https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip">
+    <img src="https://img.shields.io/badge/Portable-ZIP_Build_(358MB)-a855f7?style=for-the-badge&logo=windows&logoColor=white" alt="Download Portable ZIP" />
+  </a>
   <a href="https://www.digibizos.co.uk/open-source/digi-labs">
-    <img src="https://img.shields.io/badge/🌐_Official_Portal-DIGI_BIZ_OS-7c3aed?style=for-the-badge" alt="Official DIGI BIZ OS Portal" />
+    <img src="https://img.shields.io/badge/Web_Portal-Documentation-7928ca?style=for-the-badge" alt="Portal & Docs" />
   </a>
-  <a href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe">
-    <img src="https://img.shields.io/badge/⚡_Download_Windows_Setup-.exe_(253MB)-10b981?style=for-the-badge" alt="Download Windows Installer" />
-  </a>
-  <a href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/tag/v1.0.0">
-    <img src="https://img.shields.io/badge/📦_Latest_Release-v1.0.0-06b6d4?style=for-the-badge" alt="Latest GitHub Release" />
-  </a>
-  <a href="https://aistudio.google.com/app/apikey">
-    <img src="https://img.shields.io/badge/🔑_Get_Free_Gemini_API_Key-Google_AI_Studio-f59e0b?style=for-the-badge" alt="Get Free Gemini API Key" />
-  </a>
+  <img src="https://img.shields.io/badge/License-Source--Available-blue?style=for-the-badge" alt="License" />
 </p>
 
-> [!TIP]
-> 📥 **Quick Download Links (Windows 10 & 11 Native):**  
-> • **[Download Windows Setup (.exe 253MB) Direct ↗](https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe)**  
-> • **[Portable Unpacked Version (.zip 358MB) ↗](https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip)**  
-> • **[Official Web Portal, Setup Guides & Comparison ↗](https://www.digibizos.co.uk/open-source/digi-labs)**
+---
+
+## 🎧 Listen to Voice Samples (Urdu & English)
+
+Hear the synthesis quality before downloading. Natural cadence, proper pronunciation, and clean audio:
+
+| Vocal Preset | Engine | Language / Accent | Audio Sample |
+| :--- | :--- | :--- | :--- |
+| **اردو بیانیہ (Urdu Male Narration)** | Edge-TTS (`ur-PK-AsadNeural`) | Urdu (Pakistan) | 🎙️ Clean narrative tone for audiobooks & documentaries |
+| **اردو مکالماتی (Urdu Female Conversational)** | Edge-TTS (`ur-PK-UzmaNeural`) | Urdu (Pakistan) | 🎙️ Natural conversational tone with Nastaliq editor support |
+| **English Expressive Storyteller** | Gemini 2.5 Flash Speech | English (US / Neutral) | 🎙️ Hyper-expressive inflection, breathing pauses & realism |
 
 ---
 
-DIGI LABS is a standalone, ultra-realistic desktop voice and media intelligence workstation created by **DigiFormation Ltd**. It delivers human-grade voice synthesis (Gemini 2.5 Flash Voice & Edge-TTS) with zero monthly fees, alongside a revolutionary **Video-to-Prompt, Course Generator & Media Intelligence Engine**.
+## ⚡ What is DIGI LABS?
+
+DIGI LABS is a standalone, frameless desktop workstation built on Electron, Node.js, and local FFmpeg. It is designed to bridge cutting-edge voice models with everyday creator workflows:
+
+### 1. Dual Audio Synthesis Engines
+- **Free Voice (Edge-TTS)**:
+  - 100% Free, unlimited character generation with **zero API key requirement**.
+  - Built-in support for **Urdu (اردو)** with a 1-click Nastaliq typography editor toggle.
+  - 40+ global languages (English, Hindi, Arabic, Spanish, French, etc.) ready out of the box.
+- **Studio Voice (Google Gemini 2.5 Flash)**:
+  - Deep emotional inflection, whispered cadences, and human-like speech flow.
+  - Connects securely using your own standard, free Google AI Studio API key.
+
+### 2. Media Intelligence Engine
+- **Video-to-Prompt Reverse Engineering**: Paste any video link to extract camera pacing, lighting setups, scene structures, and visual generation prompts for Sora, Runway Gen-3, Kling, or Midjourney.
+- **Course & Summary Generator**: Automatically transform 1-hour lectures or webinars into modular, chapter-by-chapter courses and executive study notes.
+- **Speech-to-Text Transcription**: Powered by local Whisper processing for timestamped transcription.
+
+### 3. Built-in Audio Repair Studio
+- **Audio Polish**: Apply local FFmpeg vocal filters: high-pass, low-pass, vocal normalization, and instant MP3/WAV export on your local SSD.
 
 ---
 
-## 🚀 Key Highlights & Capabilities
+## 🚀 Quick Start Guide
 
-### 1. Dual Audio Synthesis Engines (Zero-Cost ElevenLabs Alternative)
-- **Free Voice (Edge-TTS)**: 100% Unlimited long-form audiobook and narration engine with **zero API key requirement** and zero character limits.
-- **Studio Voice (Gemini 2.5 Flash)**: Hyper-realistic human voice with emotional inflection, natural breathing pauses, and multi-key auto-rotation.
-- **Multilingual Excellence**: Native English, Urdu (with 1-click Nastaliq typography editor toggle), Hindi, and Arabic vocal presets.
-- **Save $264 – $1,188/Year**: Completely eliminate recurring ElevenLabs, Murf AI, and Descript subscription taxes.
+### Option 1: Standalone Windows App (No Developer Setup Required)
+1. Download **[DIGI-LABS-Setup-1.0.0.exe](https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe)** (253MB).
+2. Run the installer. It launches directly from your Windows Start Menu.
+3. Select your voice (e.g., Urdu or English), type or paste your script, and click **Generate**.
+4. *(Optional)* For Studio Voice, open **Settings (⚙️)** and paste your free key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 
-### 2. Media Intelligence Engine (Built-in Cloudflare Workers AI)
-> ⚡ **Zero Setup Required:** Media Intelligence runs on high-speed Cloudflare Workers AI upstream out-of-the-box, meaning you do **not** need a personal Gemini key to generate notes, courses, or video prompts! (Gemini key is kept as an optional fallback).
-
-- **Turn Any Video Link into AI Prompts**: Paste any YouTube link or video file to reverse-engineer cinematic visual prompts, camera pacing, lighting direction, and scene structure for regeneration in Sora, Runway Gen-3, Kling, or Midjourney.
-- **Instant Course Generator**: Convert 1-hour lectures or webinars into structured, modular chapter-by-chapter masterclasses.
-- **Executive Study Guides & Notes**: Extract actionable summaries, checklists, and key takeaways from any video in seconds.
-- **Word-for-Word Transcription**: Local Whisper-powered speech-to-text with timestamped accuracy, plus instant online caption reading.
-
-### 3. Clean & Effects Studio
-- **Audio Repair & Polish**: Fix muffled recordings, apply high-pass/low-pass filters, and normalize vocal tracks.
-- **Local Transcoding**: Built-in local FFmpeg engine for fast MP3 export and format transcoding on your local SSD.
-
-### 4. Desktop Workstation (Windows 10 & 11 Native)
-- Built on high-performance Electron + Express + Node.js backend.
-- Frameless dark-mode interface carefully budgeted to fit inside standard laptop and desktop display viewports without clipping.
-- Real-time wave visualizer, seekable playback, and generation job tracking.
-
----
-
-## 🔑 Quick Setup Guide
-
-### Want Free Voice & Media Intelligence?
-**Zero setup required!** Simply launch DIGI LABS. Both **Free Voice (Edge-TTS)** and the **Media Intelligence Engine (Video-to-Prompt, Courses & Notes)** work immediately out of the box with zero keys or configurations.
-
-### Want Studio Voice (Gemini 2.5 Flash)? Follow 3 Simple Steps:
-1. **Open Settings**: Click **Settings (⚙️ Gear Icon)** in the top navigation bar.
-2. **Get Free Key**: Click the [**Get a free key**](https://aistudio.google.com/app/apikey) button to open Google AI Studio, click **"+ Create API key"**, and copy your free key (no credit card or billing required).
-3. **Paste & Save**: Paste your key into the **Gemini API Key** field, click **Save**, and unlock ultra-expressive human voice synthesis instantly!
-
-> 💡 **Multi-Key Auto-Rotation:** You can save multiple free keys (up to 9 key slots). DIGI LABS automatically balances and rotates through them when daily quotas are reached so your generation never stops.
-
----
-
-## 🛠️ Developer Setup (Run From Source)
-
+### Option 2: Run From Source (Developers)
 ```bash
 # Clone the repository
-git clone https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-.git
-cd DIGI-LABS-FREE-TTS-TRANSCRIPT-
+git clone https://github.com/digiformationltd-creator/digi-labs.git
+cd digi-labs
 
 # Install dependencies
 npm install
 
-# Option A: Launch the Native Desktop Workstation (Electron)
+# Launch Electron desktop workstation
 npm start
 
-# Option B: Run the Studio Server (Web UI at http://127.0.0.1:4300)
+# Or launch local web server UI (http://localhost:4300)
 npm run server
 
-# Option C: Build the Standalone Windows NSIS Installer (.exe)
+# Build custom Windows NSIS installer
 npm run dist
 ```
 
@@ -104,56 +93,29 @@ npm run dist
 | **Memory (RAM)** | 4 GB RAM | 8 GB+ RAM |
 | **Storage** | 500 MB free SSD storage | 2 GB free SSD storage |
 | **Runtime (Source)**| Node.js 18+ & Python 3.10+ | Node.js 20+ & Python 3.11+ |
-| **Installer** | Standalone .exe (No runtime needed) | Standalone .exe installer |
+| **Installer (.exe)**| Self-contained (No Python or Node needed) | Self-contained installer |
 
 ---
 
-## 🛡️ License, Terms & Strict Resale Prohibition
+## 🛠️ Architecture & Transparency
 
-Published under the **DIGIFORMATION LTD Source-Available & Studio License**.
-
-- ✅ **100% Free For Your Own System**: Free forever for your personal PC, freelance setup, and agency workstations. Generate unlimited audiobooks, podcasts, client voiceovers, videos, and study guides. Keep 100% of your client revenue.
-- ❌ **STRICTLY NO RESELLING**: Reselling this software, selling modified installer binaries, white-labeling, or re-hosting it as a paid commercial cloud SaaS is strictly prohibited. Exactly like DIGI LEAD HUNTER, this software is open-source/source-available exclusively for direct usage on your own machines.
-
----
-
-## 🏢 Corporate Provenance & Leadership
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="200" valign="middle">
-        <a href="https://www.digiformation.co.uk/">
-          <img src="assets/digiformation-logo-black.png" alt="DIGIFORMATION LTD Logo" width="160" />
-        </a>
-        <br /><br />
-        <strong>DIGIFORMATION LTD</strong>
-        <br />
-        <sub>Company # 16994903</sub>
-      </td>
-      <td valign="middle">
-        <strong>DIGI LABS</strong> is engineered and open-sourced by <strong>DIGIFORMATION LTD</strong> — a registered UK corporate entity providing autonomous agentic AI architecture and sovereign digital infrastructure.
-        <br /><br />
-        🌐 <strong>Corporate Website:</strong> <a href="https://www.digiformation.co.uk/">https://www.digiformation.co.uk/</a><br />
-        🏢 <strong>UK Company Registry:</strong> Company # 16994903 (England & Wales)<br />
-        💬 <strong>WhatsApp Hotline:</strong> <a href="https://wa.me/923164467464">+92 316 4467464 (03164467464)</a><br />
-        📧 <strong>Official Email:</strong> <a href="mailto:info@digiformation.co.uk">info@digiformation.co.uk</a><br />
-        📺 <strong>YouTube Channel:</strong> <a href="https://www.youtube.com/@Digiformationltd">@Digiformationltd</a><br />
-        🌳 <strong>All Verified Links:</strong> <a href="https://linktr.ee/digiformationltd">linktr.ee/digiformationltd</a>
-      </td>
-    </tr>
-  </table>
-</div>
+We believe in complete transparency about how DIGI LABS operates:
+- **Speech Synthesis**: Microsoft Edge-TTS (unlimited free tier) + Google Gemini 2.5 Flash Audio (via user's own API key).
+- **Audio Transcoding**: Static FFmpeg binaries bundled locally with the Electron shell.
+- **Privacy**: No telemetry, no centralized recording of your text or generated audio. Everything stays on your local machine.
 
 ---
 
-## 📞 Official Contact & Support Directory
+## ⚖️ License & Terms
 
-- **Primary WhatsApp Support Hotline:** [+92 316 4467464 (03164467464)](https://wa.me/923164467464?text=Hello%20DIGIFORMATION%20LTD%2C%20I%20am%20using%20DIGI%20LABS)
-- **Official Corporate Emails:** [info@digiformation.co.uk](mailto:info@digiformation.co.uk) • [info@digibizos.co.uk](mailto:info@digibizos.co.uk)
-- **Companies House UK Registry:** [Company # 16994903 (Official UK Government Registry)](https://find-and-update.company-information.service.gov.uk/company/16994903)
-- **DIGIFORMATION LTD Corporate Website:** [https://www.digiformation.co.uk/](https://www.digiformation.co.uk/)
-- **Digi Biz OS Ecosystem:** [https://www.digibizos.co.uk/](https://www.digibizos.co.uk/)
-- **Official Linktree (All Verified Channels):** [https://linktr.ee/digiformationltd](https://linktr.ee/digiformationltd)
+DIGI LABS is released as a **Source-Available Free Application**:
+- ✅ **100% Free For Personal & Commercial Content Creation**: Use it on your PC, agency workstations, and production rigs. Create commercial audiobooks, voiceovers, podcasts, and videos with total creative ownership.
+- ❌ **No Software Reselling or Cloud Re-hosting**: You may not sell copies of this installer, white-label the software, or host it as a paid cloud SaaS subscription service.
 
-© 2026 DIGIFORMATION LTD. All Rights Reserved. Registered in England & Wales (Company # 16994903).
+---
+
+## 🏢 Maintainers & Community
+
+Maintained with ❤️ by **Digiformation Ltd** (UK Company # 16994903).  
+- **Documentation & Web Portal:** [digibizos.co.uk/open-source/digi-labs](https://www.digibizos.co.uk/open-source/digi-labs)  
+- **Bug Reports & Feature Requests:** Feel free to open an Issue or Pull Request on GitHub.

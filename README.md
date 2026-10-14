@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="banner.png" alt="DIGI LABS - Free Multilingual & Urdu Voice Studio" width="100%">
+  <img src="banner.png" alt="DIGI LABS - Free Studio Human Voice & Media Workstation" width="100%">
 </p>
 
-# DIGI LABS: Free Desktop Studio Voice & Media Workstation
-> **Broadcast-grade human speech synthesis powered directly by Google Gemini 2.5 Flash Studio Voice, with unlimited offline Free Voice (Edge-TTS) and local Whisper transcription.**
+# DIGI LABS: Free Desktop Human Voice & Media Studio
+> **Broadcast-grade human speech synthesis powered 100% by Google Gemini 2.5 Flash Studio Voice, with built-in Video-to-Prompt reverse engineering and local Whisper transcription.**
 
 <p align="center">
   <a href="https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe">
@@ -20,38 +20,33 @@
 
 ---
 
-## 🎙️ Flagship Engine: Google Gemini 2.5 Flash Studio Voice
+## 🎙️ 100% Authentic Human Voice (Google Gemini 2.5 Flash Studio Voice)
 
-DIGI LABS harnesses **Google Gemini 2.5 Flash Preview TTS (`gemini-2.5-flash-preview-tts`)** to generate authentic, human-grade voiceovers with true breath control, emotional dynamic range, and natural pauses.
+Unlike conventional text-to-speech tools that sound mechanical or robotic, **DIGI LABS runs exclusively on Google Gemini 2.5 Flash Studio Voice (`gemini-2.5-flash-preview-tts`)**. 
 
-- **Direct Studio PCM Audio**: Synthesizes uncompressed 24kHz 16-bit raw PCM audio directly from Google AI Studio, mastered to MP3/WAV via local FFmpeg.
+Traditional mechanical TTS systems (such as Edge-TTS) were deliberately excluded from the voice generation pipeline because they lack emotional depth and sound robotic. In DIGI LABS, every clip is synthesized with authentic human breathing, vocal timbre, and natural cadence.
+
+### Key Audio Features:
+- **Direct Studio PCM Audio**: Synthesizes uncompressed 24kHz 16-bit raw PCM audio directly from Google AI Studio, mastered to MP3 via bundled local static FFmpeg.
 - **5 Expressive Delivery Styles**:
-  - `Normal` — Balanced, authentic narration for documentaries and audiobooks.
-  - `Business` — Polished, confident corporate delivery for presentations and demos.
-  - `Promo` — Energetic, high-impact hook delivery for short-form ads and reels.
-  - `Explainer` — Friendly, clear instructional tone for tutorials and online courses.
-  - `Calm` — Slow, soothing cadence for wellness and bedtime storytelling.
-- **Diverse Character Timbers (Men & Women)**: Rich vocal presets (`Charon`, `Puck`, `Fenrir`, `Orus`, `Aoede`, `Kore`, etc.) covering varying resonance and pitches.
-- **Direct Private BYOK**: Connects directly from your desktop to Google AI Studio with your own free API key. Zero cloud proxies, zero telemetry, and zero subscription fees.
-
----
-
-## ⚡ Secondary Engine: Unlimited Free Voice (Edge-TTS)
-
-For infinite long-form narration without an API key:
-- **Zero API Key Required**: 100% free with unlimited character volume.
-- **Native Urdu (اردو) & RTL Support**: Native Urdu accent with a 1-click Nastaliq typography editor toggle.
-- **40+ Languages & Dialects**: English, Urdu, Hindi, Arabic, Spanish, French, German, and more with male and female voice variants.
+  - `Normal` *(Default)* — Natural, authentic narration for audiobooks, documentaries, and long-form scripts.
+  - `Business` — Polished, confident corporate delivery for brand presentations and client demos.
+  - `Promo` — Energetic, high-impact hook delivery for viral shorts, reels, and ads.
+  - `Explainer` — Friendly, clear instructional tone for tutorials and educational courses.
+  - `Calm` — Soothing, slow cadence for bedtime stories and mindfulness content.
+- **Natural Character Presets (Men & Women)**: Distinct vocal profiles (`Charon`, `Puck`, `Fenrir`, `Orus`, and multilingual variants) covering different resonance, warmth, and depth.
+- **Private Direct BYOK**: Connects directly from your PC to Google AI Studio with your own free API key. Zero cloud middleman, zero proxies, zero telemetry, and zero subscription taxes.
 
 ---
 
 ## 🎬 Built-in Media Intelligence Workstation
 
-Beyond voice synthesis, DIGI LABS provides three built-in media tools:
+Beyond human voiceover synthesis, DIGI LABS features an integrated multimedia reverse-engineering suite:
 
 1. **Video-to-Prompt Reverse Engineering**: Paste any video link (YouTube, MP4) to extract camera motion cues, volumetric lighting setups, and production prompts for Sora, Runway Gen-3, Kling, or Midjourney.
 2. **Automated Course & Note Generator**: Transform 1-hour lectures or webinars into modular syllabi, chapter-by-chapter student notes, and executive summaries automatically.
 3. **Local Whisper Speech-to-Text**: Generate word-for-word timestamped subtitles and transcripts locally on your PC.
+4. **Urdu & RTL Typography Support**: Instant 1-click Nastaliq typography editor toggle for regional creators and localization.
 
 ---
 
@@ -60,8 +55,8 @@ Beyond voice synthesis, DIGI LABS provides three built-in media tools:
 ### Option 1: Standalone Windows App (Recommended)
 1. Download **[DIGI-LABS-Setup-1.0.0.exe](https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe)** (253MB).
 2. Run the installer. It launches directly from your Windows Start Menu.
-3. In **Settings (⚙️)**, paste your free API key from [Google AI Studio](https://aistudio.google.com/app/apikey) for Studio Voice.
-4. Select your voice and emotional style, paste your script, and click **Generate**.
+3. In **Settings (⚙️)**, paste your free API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+4. Select your voice and delivery style, type or paste your script, and click **Generate Voice**.
 
 ### Option 2: Run From Source (Developers)
 ```bash
@@ -99,9 +94,9 @@ npm run dist
 
 ## 🛠️ Architecture & Transparency
 
-- **Primary Studio Engine**: Google Gemini 2.5 Flash Audio (`gemini-2.5-flash-preview-tts`) connecting directly via user's private Google AI Studio API key.
-- **Secondary Fallback Engine**: Microsoft Edge-TTS for unlimited offline zero-key narrations.
-- **Audio Processing**: Bundled local static FFmpeg for 24kHz raw PCM transcoding and loudness normalization.
+- **Voice Synthesis**: Exclusively powered by Google Gemini 2.5 Flash Audio (`gemini-2.5-flash-preview-tts`) connecting directly via user's private Google AI Studio API key. Robotic/mechanical TTS engines are strictly disabled in production.
+- **Audio Transcoding**: Bundled local static FFmpeg for 24kHz raw PCM transcoding and loudness normalization.
+- **Media Intelligence**: High-speed Cloudflare Workers AI + optional local Whisper STT.
 - **Privacy Guarantee**: Zero tracking, zero telemetry, and zero middleman servers. All scripts and audio files stay strictly on your local PC.
 
 ---
@@ -158,4 +153,3 @@ DIGI LABS is released as a **Source-Available Free Application**:
 <p align="center">
   <sub>© 2026 DIGIFORMATION LTD. All Rights Reserved. Registered in England & Wales (Company # 16994903).</sub>
 </p>
-

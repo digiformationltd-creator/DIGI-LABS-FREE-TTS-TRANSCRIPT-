@@ -6,11 +6,11 @@
 > **Broadcast-grade Free Text-to-Speech (TTS) powered 100% by Google Gemini 2.5 Flash Studio Voice, with built-in Video-to-Prompt reverse engineering and local Whisper transcription.**
 
 <p align="center">
-  <a href="https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe">
-    <img src="https://img.shields.io/badge/Download-Windows_Setup_(.exe_253MB)-00f5d4?style=for-the-badge&logo=windows&logoColor=black" alt="Download Windows Setup" />
+  <a href="https://www.digibizos.co.uk/open-source/digi-labs">
+    <img src="https://img.shields.io/badge/Download-Windows_Setup_(.exe_253MB)-00f5d4?style=for-the-badge&logo=windows&logoColor=black" alt="Download Windows Setup via Official Portal" />
   </a>
-  <a href="https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip">
-    <img src="https://img.shields.io/badge/Portable-ZIP_Build_(358MB)-a855f7?style=for-the-badge&logo=windows&logoColor=white" alt="Download Portable ZIP" />
+  <a href="https://www.digibizos.co.uk/open-source/digi-labs">
+    <img src="https://img.shields.io/badge/Portable-ZIP_Build_(358MB)-a855f7?style=for-the-badge&logo=windows&logoColor=white" alt="Download Portable ZIP via Official Portal" />
   </a>
   <a href="https://www.digibizos.co.uk/open-source/digi-labs">
     <img src="https://img.shields.io/badge/Web_Portal-Documentation-7928ca?style=for-the-badge" alt="Portal & Docs" />
@@ -67,7 +67,7 @@ Beyond human text-to-speech (TTS), DIGI LABS features an integrated multimedia r
 ## 🚀 Quick Start Guide
 
 ### Option 1: Standalone Windows App (Recommended)
-1. Download **[DIGI-LABS-Setup-1.0.0.exe](https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe)** (253MB).
+1. Visit the **[Official DIGI LABS Download Portal](https://www.digibizos.co.uk/open-source/digi-labs)** to download the Windows installer (`DIGI-LABS-Setup-1.0.0.exe`, 253MB) or Portable ZIP package.
 2. Run the installer. It launches directly from your Windows Start Menu.
 3. In **Settings (⚙️)**, paste your free API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 4. Select your voice and delivery style, type or paste your script, and click **Generate Voice**.
